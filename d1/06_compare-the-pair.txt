@@ -1,0 +1,13 @@
+> Query: For each 2 values from input, output the greater one.
+// Given two numbers, output the greater number.
+int = input;           // Read one number from input.
+reg = input;           // Read another number from input.
+check int > reg;       // Check whether int > reg.
+jump if true: left;    // If true, left operand is larger.
+jump if false: right;  // Otherwise, right operand is larger.
+left:                  // Left operand is larger.
+    output = int;      // Write left operand to output.
+    jump to: end;      // Go to end of program.
+right:                 // Right operand is larger.
+    output = reg;      // Write right operand to output.
+end:
