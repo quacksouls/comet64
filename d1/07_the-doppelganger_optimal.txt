@@ -1,0 +1,11 @@
+// Read the years, one at a time.  A year can occur twice in a
+// row.  Output the duplicate years.  The register int always
+// start with 0.  Assume this to be the case and read input
+// into the register reg only.  This solution is optimal,
+// according to the game.
+reg = input;        // Read the year from input.
+check int = reg;    // Are both values the same?
+jump if false: end; // If values are different, go to "end".
+output = int;       // Otherwise print the duplicate year.
+end:                // The "end" label.
+    int = reg;      // Set current year to latest year.
