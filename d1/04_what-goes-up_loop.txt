@@ -1,0 +1,13 @@
+> Query: Ignore the input for now and output all the numbers from 1 to
+> 100, inclusive.
+// We need to output all integers from 1 to 100, inclusive.
+// In a high-level programming language, we would typically
+// use a loop as follows.
+int = 1;                 // Start at 1.
+loop:                    // Start of loop.
+    output = int;        // Ouput the integer.
+    int++;               // Increment the current integer.
+    check int < 101;     // If current integer is < 101, then
+    jump if true: loop;  // ...go to the start of the loop.
+    jump if false: end;  // Otherwise, finish the loop.
+end:
