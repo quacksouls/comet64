@@ -1,0 +1,15 @@
+> Query: Zero marks the end of a package.  Output the sum of every package.
+> Example:
+> [input: 4, 2, 6, 0, 2, 0, 1, 6, 0]
+> [output: 12, 2, 7]
+// Assume that the register "reg" is initially zero so no need
+// to set it to zero.  Use an if-else structure.
+int = input;          // Read the input number.
+reg = reg + int;      // Update the cumulative sum.
+check int = 0;        // Test whether the input is zero.
+jump if true: print;  // If input is zero, print sum.
+jump if false: end;   // Otherwise, end of program.
+print:                // Start of "print" label.
+    output = reg;     // Print the cumulative sum.
+    reg = 0;          // Set cumulative sum to zero.
+end:                  // End of program.

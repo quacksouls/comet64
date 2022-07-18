@@ -1,0 +1,14 @@
+> Query: Zero marks the end of a package.  Output the sum of every package.
+> Example:
+> [input: 4, 2, 6, 0, 2, 0, 1, 6, 0]
+> [output: 12, 2, 7]
+// Assume that the register "reg" is initially zero so no need
+// to set it to zero.  This solution is optimal, according to
+// the game.
+int = input;         // Read the input number.
+reg = reg + int;     // Update the cumulative sum.
+check int = 0;       // Test whether the input is zero.
+jump if false: end;  // If input is non-zero, jump to "end".
+output = reg;        // Otherwise print the cumulative sum.
+reg = 0;             // Set "reg" to zero.
+end:                 // End of program.
