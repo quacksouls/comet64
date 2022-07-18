@@ -1,0 +1,12 @@
+> Query: Output a countdown from 100 to 0, inclusive.  Ignore the input.
+// We need to output all integers starting from 100 and count
+// down to 0.  The count should include both 100 and 0.  This
+// solution uses a loop that has a start and an end.
+int = 100;                // Start at 100.
+loop:                     // Start of loop.
+    output = int;         // Write to output.
+    int--;                // Decrement the integer by 1.
+    check int < 0;        // Check if the integer is < 0.
+    jump if true: end;    // If int < 0, then end the loop.
+    jump if false: loop;  // Otherwise, go to start of loop.
+end:
