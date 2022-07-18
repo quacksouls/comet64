@@ -3,7 +3,7 @@
 // Read the years, one at a time.  A year can occur twice in a
 // row.  Output the duplicate years.  The register int always
 // start with 0.  Assume this to be the case and read input
-// into the register reg only.
+// into the register reg only.  This solution uses a loop.
 loop:                     // Start of loop.
     reg = input;          // Read the year from input.
     check int = reg;      // Are both values the same?
