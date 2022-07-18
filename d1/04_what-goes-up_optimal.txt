@@ -5,5 +5,5 @@
 // always start with the value 0.  Incrementing that register
 // would give us 1 and we can output that value.  Continue
 // incrementing and outputting until we have output 100.
-//int++;
-//output = int;
+int++;
+output = int;
