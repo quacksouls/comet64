@@ -1,0 +1,13 @@
+// Read the years, one at a time.  A year can occur twice in a
+// row.  Output the duplicate years.  The register int always
+// start with 0.  Assume this to be the case and read input
+// into the register reg only.  This solution does not use a
+// loop.
+reg = input;          // Read the year from input.
+check int = reg;      // Are both values the same?
+jump if true: print;  // If both are same values, print.
+jump to: end;         // Otherwise, go to end.
+print:                // If both years are the same...
+    output = int;     // ...print the duplicate year.
+end:                  // The end.
+    int = reg;        // Set current year to latest year.
