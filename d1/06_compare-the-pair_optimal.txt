@@ -1,0 +1,10 @@
+> Query: For each 2 values from input, output the greater one.
+// Given two numbers, output the greater number.
+// This solution is optimal, according to the game. 
+int = input;          // Read one number from input.
+reg = input;          // Read another number from input.
+check int > reg;      // Test whether int > reg.
+jump if true: print;  // If int > reg, then print int.
+int = reg;            // Otherwise, set int to value of reg.
+print:                // The "print" label.
+    output = int;     // Output the value of int.
