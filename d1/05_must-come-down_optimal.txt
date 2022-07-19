@@ -1,0 +1,8 @@
+> Query: Output a countdown from 100 to 0, inclusive.  Ignore the input.
+// We need to output all integers starting from 100 and count
+// down to 0.  The count should include both 100 and 0.
+// Assume the register "int" to be initially set to zero.  This
+// solution is optimal, according to the game.
+reg = 100 - int;
+output = reg;
+int++;
