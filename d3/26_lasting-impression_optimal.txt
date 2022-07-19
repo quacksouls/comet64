@@ -1,0 +1,6 @@
+> Query: Output the last character of each string in input.
+// Print the last character of an input string.
+str = input;           // Read the input string.
+int = str.length - 1;  // Index of the last character.
+char = str[int];       // The last character.
+output = char;         // Print the last character.
