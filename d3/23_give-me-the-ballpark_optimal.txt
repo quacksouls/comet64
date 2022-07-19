@@ -7,7 +7,7 @@
 int++;               // How many numbers read so far.
 reg = reg + input;   // The cumulative sum.
 check input = null;  // Whether we run out of numbers.
-jump if false: end;  // Otherwise, branch to "end".
+jump if false: end;  // If false, branch to "end".
 reg = reg / int;     // The arithmetic mean.
 output = reg;        // Print the arithmetic mean.
 end:                 // The "end" branch.
