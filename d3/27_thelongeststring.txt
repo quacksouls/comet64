@@ -1,0 +1,18 @@
+> Query: Read all the strings in input, find the longest one.  Output only
+> that.
+// Find the longest string.
+check input = null;      // Whether we run out of strings.
+jump if true: print;     // If no more strings, go to "print".
+jump if false: compare;  // Otherwise, branch to "compare".
+compare:                 // The "compare" branch.
+    str = input;         // Read the input string.
+    int = str.length;    // How many characters in the string.
+    check reg < int;     // New string has more characters?
+    jump if false: end;  // If not, branch to "end".
+    reg = int;           // If true, note length of new string.
+    switch str;          // Store the new string.
+    jump to: end;        // Branch to "end".
+print:                   // The "print" branch.
+    switch str;          // Retrieve the longest string.
+    output = str;        // Print the longest string.
+end:                     // The "end" branch.
