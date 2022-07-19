@@ -1,0 +1,13 @@
+> Query: For each two values from input, calculate the absolute difference
+> between them.  If the difference is more than 5, output "true"; otherwise
+> output "false".
+// If a and b are given numbers, we want to calculate the
+// number c := abs(a - b), where abs(x) is the absolute value
+// function.  Print "true" if c > 5; print "false" otherwise.
+// This solution is optimal, according to the game.
+int = input - input;           // Read the first input.
+check int > 5;
+jump if true: print;
+check int < -5;
+print:
+    output = bool;
