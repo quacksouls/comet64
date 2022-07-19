@@ -1,0 +1,22 @@
+> Query: Input contains two-digit numbers only.  Read them and reverse
+> their digits before outputting them.
+> Example:
+> [:input 41, output: 14]
+> [input: 29, output: 92]
+// Switch the digits of a 2-digit integer.  Isolate the tens
+// units digits.  Let a be the tens digit and let b be the
+// units digit.  If we are given a 2-digit integer as ab, then
+// we output ba.  The tens digit is defined as a := x / 10.
+// The units digit is defined as b := x mod 10, where mod
+// is the remainder operator.  We also have the definition
+// b := x - 10a.
+reg = input;      // Read the input number.
+int = reg / 10;   // The tens digit.
+switch int;       // Store the tens digit.
+int = reg / 10;   // The quotient a := x / 10.
+int = 10 * int;   // The multiple 10a.
+int = reg - int;  // The remainder b := x mod 10.
+reg = int * 10;   // The remainder is now the tens digit.
+switch int;       // Retrieve the tens digit from memory.
+reg = reg + int;  // The tens digit is now the units digit.
+output = reg;     // Print the reversed number.
