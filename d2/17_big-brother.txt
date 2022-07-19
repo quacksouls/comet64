@@ -1,0 +1,16 @@
+> Query: Read 3 input values in a row.  Output the greatest of 3 numbers.
+> Repeat.
+// Determine the maximum of 3 numbers.  This solution is
+// optimal, according to the game.
+int = input;              // Read the first number.
+reg = input;              // Read the second number.
+check int < reg;          // Test whether first < second.
+jump if true: less;       // If first < second, go to "less".
+reg = int;                // Otherwise, first >= second.
+less:                     // The "less" branch.
+    int = input;          // Read the third number.
+    check int < reg;      // Test whether 3rd < current max.
+    jump if true: print;  // Go to "print".
+    reg = int;            // The max of all 3 numbers.
+print:                    // The "print" branch.
+    output = reg;         // Output the maximum.
