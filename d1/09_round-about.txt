@@ -1,0 +1,14 @@
+> Query: Input contains decimal numbers only.  Round them to the nearest
+> integer before outputting.
+> Example:
+> [input: 2.3, 7.8, 15.5]
+> [output: 2, 8, 16]
+// We are rounding half up, i.e. round half toward positive
+// infinity.  Define our rounding function as
+// round(x) := floor(x + 0.5), where we use the floor()
+// function.  The floor(x) function of a floating point number
+// x is equivalent to the integer part of x.  This solution is
+// optimal, according to the game.
+reg = input;      // Read the input number.
+int = reg + 0.5;  // The floor(x + 0.5) function.
+output = int;     // Print the rounded integer.
