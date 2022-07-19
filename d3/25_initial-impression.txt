@@ -1,0 +1,6 @@
+> Query: Output the first character of each string in input.
+// Print the first character of an input string.  This solution
+// is optimal, according to the game.
+str = input;    // Read the input string.
+char = str[0];  // The first character of the string.
+output = char;  // Print the first character.
