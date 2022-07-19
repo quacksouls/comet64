@@ -1,0 +1,17 @@
+> Query: Input contains integer numbers only.  Round them to the nearest
+> 10 before outputting.
+> Example:
+> [input: 7, 26, 113]
+> [output: 10, 30, 110]
+// To round a floating point number to the nearest tens, we
+// divide the number by 10 and treat the problem as if we are
+// rounding the number to the nearest integer.  Then multiply
+// the result by 10 to obtain the desired number.  The
+// algorithm for rounding to the nearest integer is
+// round(x) := floor(x + 0.5), where the floor(x) function of
+// x is the same as the integer part of a floating point
+// number x.  This solution is optimal, according to the game.
+reg = input / 10;  // Divide the input by 10.
+int = reg + 0.5;   // Round to nearest integer.
+int = int * 10;    // Multiply by 10 to undo division.
+output = int;      // Print the result.
