@@ -1,0 +1,20 @@
+> Query: Only output the numbers that have a remainder of 3 when divided by 4.
+// Given an input x, we print x if it has a remainder of 3
+// after division by 4.  The remainder function is
+//
+// f(x) := x mod 4
+//
+// This can be implemented as follows.  Define the quotient by
+// q := floor(x / 4), where the floor(x) function is simply
+// the integer part of a floating point number x.  Define the
+// number n := 4 * q and the remainder can be calculated as
+// r := x - n.  This solution is optimal, according to the
+// game.
+reg = input;         // Read the input.
+int = reg / 4;       // The quotient q := floor(x / 4).
+int = 4 * int;       // The number n := 4 * q.
+int = reg - int;     // The remainder r := x - n.
+check int = 3;       // Test if the remainder is 3.
+jump if false: end;  // The remainder is not 3, go to "end".
+output = reg;        // Print the original number.
+end:                 // End of program.
