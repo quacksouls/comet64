@@ -1,0 +1,19 @@
+> Query: Read all values from input and find the greatest of them all.
+> Output only that.
+// Determine the maximum of a bunch of numbers.  Read in the
+// first value because all the integers might be negative.
+// Cannot assume that all numbers are positive, hence cannot
+// use the initial value of "int" as zero.
+int = input;               // Read first number.
+start:                     // The "start" branch.
+    check input = null;    // More numbers?
+    jump if true: print;   // If no more, print maximum.
+    reg = input;           // Read the next input.
+    check int < reg;       // Is current max < input?
+    jump if true: newMax;  // If so, go to "newMax".
+    jump to: start;        // Otherwise, go to "start".
+print:                     // The "print" branch.
+    output = int;          // Print the maximum number.
+newMax:                    // The "newMax" branch.
+    int = reg;             // The new maximum value.
+    jump to: start;        // Branch to "start".
