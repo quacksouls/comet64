@@ -1,0 +1,22 @@
+> Query: Reverse each string in input before outputting.
+> Example:
+> [input: asd, output: dsa]
+// We must reverse a string in-place because we have only one
+// string variable.
+str = input;               // Read the input string.
+int = 0;                   // The left index.
+reg = str.length - 1;      // The right index.
+loop:                      // The "loop" branch.
+    check int < reg;       // Is left < right?
+    jump if false: print;  // If left >= right, go to "print".
+    char = str[int];       // The left character.
+    switch char;           // Store the character in memory.
+    char = str[reg];       // The right character.
+    str[int] = char;       // Left index has right character.
+    switch char;           // Retrieve the left character.
+    str[reg] = char;       // Right index has left character.
+    int++;                 // Increment left index.
+    reg--;                 // Decrement right index.
+    jump to: loop;         // Go to start of loop.
+print:                     // The "print" branch.
+    output = str;          // Print the reversed string.
