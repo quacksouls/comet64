@@ -1,0 +1,8 @@
+> Query: Input contains the x coordinate followed by the y coordinate of a
+> point.  Output the pair (x, y) together.
+> Example:
+> [input: 2, 5, 0, 4]
+> [output: (2,5), (0,4)]
+int = input;        // Read the x-coordinate.
+reg = input;        // Read the y-coordinate.
+output = int, reg;  // Print the coordinates (x, y).
