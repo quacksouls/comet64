@@ -1,0 +1,18 @@
+> Query: Input contains random decimal values.  For each value x, output
+> [x * (x - 1)].
+> Example:
+> [input: 4.2, output: 13.44]
+// Let x be a floating point number with one digit after the
+// decimal point.  Write the expression [x * (x - 1)] as
+//
+// (x / 10) * [10 * (x - 1)]
+//
+// The expression 10 * (x - 1) = 10*x - 10 is an integer so
+// it can be stored in the "int" register.  We store x / 10
+// in the "reg" register.
+reg = input;      // Read the number.
+int = 10 * reg;   // 10*x
+int = int - 10;   // 10*x - 10
+reg = reg / 10;   // x / 10
+reg = reg * int;  // (x / 10) * [10 * (x - 1)]
+output = reg;     // Print the result.
