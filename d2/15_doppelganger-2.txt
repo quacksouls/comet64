@@ -1,0 +1,6 @@
+> Query: For each two values from input, check if they are the same.  If they
+> are, output "true"; otherwise output "false".
+// Check whether two consecutive strings are the same.
+str = input;        // Read an input string.
+check str = input;  // Is current string same as new input?
+output = bool;      // Print the result of comparison.
