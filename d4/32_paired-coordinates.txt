@@ -1,0 +1,15 @@
+> Query: Input contains two x coordinates followed by the two
+> corresponding y coordinates.  Output the pair (x, y) together.
+> Example:
+> [input: 2, 5, 0, 4]
+> [output: (2,0), (5,4)]
+// We are given x_1, x_2, y_1, y_2.  We must output (x_1, y_1)
+// and (x_2, y_2).
+int = input;        // x_1
+reg = input;        // x_2
+switch reg;         // Store x_2 in memory.
+reg = input;        // y_1
+output = int, reg;  // Print (x_1, y_1).
+switch int;         // Retrieve x_2 from memory.
+reg = input;        // y_2
+output = int, reg;  // Print (x_2, y_2).
