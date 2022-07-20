@@ -1,0 +1,24 @@
+> Query: Input contains results of 100 coin flips.  Output the winner:
+> "heads" or "tails", whichever wins the majority of the time.  If equal,
+> then output "draw".
+check input = null;            // Any more coin result?
+jump if true: print;           // No more result, then print.
+check input = heads;           // Is it heads?
+jump if false: tails;          // If not, go to "tails".
+reg++;                         // Increment number of heads.
+jump to: end;                  // Branch to "end".
+print:                         // The "print" branch.
+    check reg > int;           // #heads > #tails?
+    jump if true: printHeads;  // If true, go to "printHeads".
+    check reg = int;           // A draw?
+    jump if true: printDraw;   // If true, go to "printDraw".
+    output = tails;            // Tails wins.
+    jump to: end;              // Branch to "end".
+printHeads:                    // The "printHeads" branch.
+    output = heads;            // Heads wins.
+    jump to: end;              // Branch to "end".
+printDraw:                     // The "printDraw" branch.
+    output = draw;             // It's a draw.
+tails:                         // The "tails" branch.
+    int++;                     // Increment number of tails.
+end:                           // The "end" branch.
