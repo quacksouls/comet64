@@ -1,0 +1,18 @@
+> Query: Read all values from input and find the greatest of them all.
+> Output only that.
+// Determine the maximum of a bunch of numbers.  Read in the
+// first value because all the integers might be negative.
+// Cannot assume that all numbers are positive, hence cannot
+// use the initial value of "int" as zero.  This solution uses
+// 11 lines and 185 cycles.
+int = input;              // Read first number.
+loop:                     // Start of "loop".
+    check input = null;   // More numbers?
+    jump if true: print;  // If no more, print maximum.
+    reg = input;          // Read the next number.
+    check int < reg;      // Is current max < input?
+    jump if false: loop;  // If not, go to start of "loop".
+    int = reg;            // The new maximum value.
+    jump to: loop;        // Go to start of "loop".
+print:                    // The "print" branch.
+    output = int;         // Print the maximum number.
