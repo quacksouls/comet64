@@ -1,0 +1,19 @@
+> Query: For each two values from input, calculate the absolute difference
+> between them.  If the difference is more than 5, output "true"; otherwise
+> output "false".
+// If a and b are given numbers, we want to calculate the
+// difference d := a - b.  We have three cases:
+//
+// (1) If the difference is d := 5 or d := -5, then the square
+//     is d^2 := 25.
+// (2) If 0 <= d < 5 or -5 < d <= 0, then 0 <= d^2 < 25.
+// (3) If d > 5 or d < -5, then d^2 > 25.
+//
+// We only need to test whether d^2 > 25.  If true, then the
+// difference is more than 5 units.  Otherwise the difference
+// is at most 5 units.  This solution is optimal, according
+// to the game.
+int = input - input;  // d := a - b
+int = int * int;      // d^2
+check int > 25;       // Is d^2 > 25?
+output = bool;        // Print result of test.
