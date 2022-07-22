@@ -1,0 +1,10 @@
+> Task: Make both grid patterns identical.  First grid can be written by
+> outputting true or false.  Second grid shows the solution.
+// For each grid cell, we have these definitions:
+//
+// true := shaded cell
+// false := cell not shaded
+//
+// Each cell in grid 2 is shaded.  All we need to do is output
+// true.  This solution is optimal, according to the game.
+output = true;
