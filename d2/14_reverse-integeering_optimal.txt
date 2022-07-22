@@ -1,0 +1,30 @@
+> Query: Input contains two-digit numbers only.  Read them and reverse
+> their digits before outputting them.
+> Example:
+> [:input 41, output: 14]
+> [input: 29, output: 92]
+// Let n := 10a + b be a 2-digit integer, where a and b are
+// decimal digits.  For brevity, we write the 2-digit number
+// as ab.  Using digit-wise multiplication, we have
+//
+// (1) 10.1 * ab = aba.b
+//
+// If we can remove the right-most and left-most digits from
+// expression (1), we should have the reverse of the original
+// 2-digit integer.  The left-most digit is a.  It can be
+// extracted by the digit-wise expression floor(aba.b / 100).
+// The expression floor(aba.b / 100) can be problematic
+// because given floor(999.9 / 100) the game rounds the
+// result to 10.  Instead, use floor(aba.b / 100.1).  To
+// remove the left-most digit, perform the digit-wise
+// subtraction
+//
+// (2) aba.b - a00.0 = ba.b
+//
+// Now to remove the right-most digit b from expression (2),
+// use floor(ba.b).  This solution is optimal.
+reg = input * 10.1;  // 10.1 * ab = aba.b
+int = reg / 100.1;   // a := floor(aba.b / 100.1)
+int = int * 100;     // a00
+int = reg - int;     // ba := floor(aba.b - a00.0)
+output = int;        // Print the reversed integer.
