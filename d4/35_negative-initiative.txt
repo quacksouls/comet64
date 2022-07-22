@@ -1,0 +1,19 @@
+> Query: Zero marks the end of a package.  Output the first negative number
+> in every package.  If a package doesn't contain a negative number,
+> output zero instead.
+reg = input;              // Read a number.
+check reg < 0;            // Is number < 0?
+jump if true: print;      // If so, go to "print".
+check reg = 0;            // Is number = 0?
+jump if true: zero;       // If so, go to "zero".
+jump to: end;             // Go to "end" branch.
+zero:                     // The "zero" branch.
+    output = 0;           // Print zero.
+    jump to: end;         // Go to "end" branch.
+print:                    // The "print" branch.
+    output = reg;         // Print the first negative number.
+loop:                     // Ignore all no. to end of package.
+    reg = input;          // Read input number.
+    check reg = 0;        // Is number = 0?
+    jump if false: loop;  // If not, go to start of "loop".
+end:                      // The "end" branch.
