@@ -1,0 +1,14 @@
+> Task: Make both grid patterns identical.  First grid can be written by
+> outputting true or false.  Second grid shows the solution.
+// We have the following pattern:
+//
+// oxxoooo
+//
+// Print this pattern over and over.
+output = false;
+output = true;
+output = true;
+output = false;
+output = false;
+output = false;
+output = false;
