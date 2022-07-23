@@ -1,0 +1,13 @@
+> Task: Make both grid patterns identical.  First grid can be written by
+> outputting true or false.  Second grid shows the solution.
+// Use a string to encode the pattern.  Test whether character
+// i is "x" and print the boolean result.  This solution is
+// optimal, according to the game.
+// Use a string to encode the pattern.  Test whether character
+// i is "x" and print the boolean result.  This solution is
+// optimal, according to the game.
+str = xxxxoxxxooxxoooxxxxxoxxxooxxooox;  // The pattern.
+char = str[int];  // Character at index i.
+check char = x;   // Is character = "x"?
+output = bool;    // Print boolean result.
+int++;            // Increment the character index.
