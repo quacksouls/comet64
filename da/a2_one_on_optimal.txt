@@ -1,0 +1,10 @@
+> Task: Make both grid patterns identical.  First grid can be written by
+> outputting true or false.  Second grid shows the solution.
+// Only the first square is true.  All other squares are false.
+// Assume the register "int" to be initially zero.  Test the
+// value of the register and print the boolean result.
+// Then increment the value of the register.  This solution is
+// optimal, according to the game.
+check int = 0;
+output = bool;
+int++;

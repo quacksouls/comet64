@@ -1,0 +1,7 @@
+> Task: Make both grid patterns identical.  First grid can be written by
+> outputting true or false.  Second grid shows the solution.
+// Only the first square is true.  All other squares are false.
+output = true;
+loop:
+    output = false;
+    jump to: loop;

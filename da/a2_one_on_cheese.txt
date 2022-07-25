@@ -1,0 +1,11 @@
+> Task: Make both grid patterns identical.  First grid can be written by
+> outputting true or false.  Second grid shows the solution.
+// Only the first square is true.  All other squares are false.
+// Use a string to encode the solution.  Test whether the
+// character str[i] is "I" or "o".  Print the boolean result.
+// Assume the register "int" to be initially zero.
+str = Iooooooooooooooooooooooooooooooo;  // Encoded result.
+char = str[int];  // The character at index i.
+check char = I;   // Is str[i] = I?
+output = bool;    // Print the boolean result.
+int++;            // Increment the index.
