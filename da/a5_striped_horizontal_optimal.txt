@@ -1,0 +1,17 @@
+> Task: Make both grid patterns identical.  First grid can be written by
+> outputting true or false.  Second grid shows the solution.
+// Consider the following definitions:
+//
+// x := shaded square
+// o := unshaded square
+//
+// We have the pattern xxxxoooo repeated 4 times.  This
+// solution is optimal, according to the game.
+output = true;
+output = true;
+output = true;
+output = true;
+output = false;
+output = false;
+output = false;
+output = false;
