@@ -1,0 +1,44 @@
+> Query: Input contains rock, paper, or scissors.  Read a value from input,
+> compare it to the next input and output the winner of the
+> rock-paper-scissors game.  If there is no winner, output "draw".
+// Read two values from input.  Each value is a strategy, i.e.
+// either "rock", "paper", or "scissors".  Compare the two
+// strategies and determine the winner.  Output "draw" in case
+// of no winner. Use the following abbreviations and integer
+// values:
+//
+// p := paper, 16
+// r := rock, 18
+// s := scissors, 19
+//
+// The winners are:
+//
+// paper := (p - r)^2 = 4
+// rock := (r - s)^2 = 1
+// scissors := (s - p)^2 = 9
+// draw := (p - p)^2 = (r - r)^2 = (s - s)^2 = 0
+loop:                           // Start of "loop".
+    str = input;                // Read one strategy.
+    char = str[0];              // Abbreviation of strategy.
+    reg = char;                 // Integer value of strategy.
+    str = input;                // Read another strategy.
+    char = str[0];              // Abbreviation of strategy.
+    int = char;                 // Integer value of strategy.
+    reg = reg - int;            // Difference between integers.
+    reg = reg * reg;            // Squared of difference.
+    check reg = 4;              // Is paper the winner?
+    jump if true: paperWin;     // If so, go to "paperWin".
+    check reg = 1;              // Is rock the winner?
+    jump if true: rockWin;      // If so, go to "rockWin".
+    check reg = 9;              // Is scissors the winner?
+    jump if true: scissorsWin;  // If so, go to "scissorsWin".
+    output = draw;              // It's a draw.
+    jump to: loop;              // Go to start of "loop".
+paperWin:                       // The "paperWin" branch.
+    output = paper;             // Paper wins.
+    jump to: loop;              // Go to start of "loop".
+rockWin:                        // The "rockWin" branch.
+    output = rock;              // Rock wins.
+    jump to: loop;              // Go to start of "loop".
+scissorsWin:                    // The "scissorsWin" branch.
+    output = scissors;          // Scissors wins.
