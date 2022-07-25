@@ -1,0 +1,17 @@
+> Task: Make both grid patterns identical.  First grid can be written by
+> outputting true or false.  Second grid shows the solution.
+// The first and last rows are shaded.  As for the rows in
+// between, we have the pattern xoox repeated 6 times.  This
+// solution is optimal, according to the game.
+output = true;  // Shade the top row.  This also shade
+output = true;  // the bottom row once the program
+output = true;  // loops back to the top.
+output = true;
+loop:                    // Loop to shade the rows in between.
+    int++;               // How many rows have we processed?
+    output = true;       // Shade.
+    output = false;      // Unshade.
+    output = false;      // Unshade.
+    output = true;       // Shade.
+    check int < 6;       // Have we processed all middle rows?
+    jump if true: loop;  // If not, process the next row.
