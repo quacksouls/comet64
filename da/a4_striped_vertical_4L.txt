@@ -1,0 +1,8 @@
+> Task: Make both grid patterns identical.  First grid can be written by
+> outputting true or false.  Second grid shows the solution.
+// Let x be a shaded square and let o an unshaded square.  We
+// have the pattern xoxo repeated 8 times.
+output = true;
+output = false;
+output = true;
+output = false;

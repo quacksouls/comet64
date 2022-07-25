@@ -1,0 +1,14 @@
+> Task: Make both grid patterns identical.  First grid can be written by
+> outputting true or false.  Second grid shows the solution.
+// Odd numbered squares are shaded, whereas even numbered
+// squares are unshaded.  We have the pattern of
+// shade-unshade repeated over and over.
+int = 1;                    // Start from odd numbered square.
+start:                      // The shade-unshade pattern.
+    check int = 0;          // Are we unshading?
+    jump if true: unshade;  // If so, go to "unshade".
+    output = true;          // Otherwise, we shade.
+    int = 0;                // Switch to unshade.
+    jump to: start;         // Go to "start".
+unshade:                    // The unshade-shade pattern.
+    output = false;         // Unshade.
