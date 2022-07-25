@@ -1,0 +1,17 @@
+> Task: Make both grid patterns identical.  First grid can be written by
+> outputting true or false.  Second grid shows the solution.
+// Let x means a square is shaded and o means an unshaded
+// square.  Repeat the pattern
+//
+// xxxx
+//
+// 7 times.  Then print the pattern xxxo.
+loop:
+    output = true;
+    int++;
+    check int < 28;
+    jump if true: loop;
+output = true;
+output = true;
+output = true;
+output = false;
