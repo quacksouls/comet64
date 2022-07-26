@@ -6,5 +6,5 @@
 // A 20% discount is the same as 80% of the original value.
 // We must multiply the original value by 0.8.  This solution
 // is optimal, according to the game.
-reg = input * 0.8;
-output = reg;
+reg = input * 0.8;  // Multiply original value by 0.8.
+output = reg;       // Print the result.
