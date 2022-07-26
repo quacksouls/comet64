@@ -3,10 +3,11 @@
 // Read the years, one at a time.  A year can occur twice in a
 // row.  Print the duplicate years.  The register "int" is
 // initially zero.  Assume this to be the case and read input
-// into the register "reg" only.  This solution does not use a
-// loop.
+// into the register "reg" only.  We print only if two
+// consecutive values from input are the same.  This solution
+// does not use a loop.
 // Lines: 8
-// Steps: 103
+// Steps: 104
 reg = input;          // Read the year from input.
 check int = reg;      // Are both values the same?
 jump if true: print;  // If so, go to "print".
