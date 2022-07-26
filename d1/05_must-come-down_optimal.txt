@@ -7,6 +7,6 @@
 // of code.  This solution is optimal, according to the game.
 // Lines: 3
 // Steps: 302
-reg = 100 - int;
-output = reg;
-int++;
+reg = 100 - int;  // Subtract content of int from 100.
+output = reg;     // Print the result of the subtraction.
+int++;            // Increment int.
