@@ -4,7 +4,12 @@
 > [input: 100, 20, 45]
 > [output: 80, 16, 36]
 // A 20% discount is the same as 80% of the original value.
-// We must multiply the original value by 0.8.  This solution
-// is optimal, according to the game.
+// We must multiply the original value by 0.8.  No need for
+// using the "reg" register to store the fraction 0.8.  Simply
+// multiply the input value by 0.8, store the result to a
+// register, and print the content of the register.  This
+// solution is optimal, according to the game.
+// Lines: 2
+// Steps: 30
 reg = input * 0.8;  // Multiply original value by 0.8.
 output = reg;       // Print the result.
