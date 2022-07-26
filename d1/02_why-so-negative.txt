@@ -8,7 +8,7 @@
 // result in a positive number.
 // Lines: 4
 // Steps: 60
-int = -1;
-reg = input;
-reg = reg * int;
-output = reg;
+int = -1;         // Store -1 in a register.
+reg = input;      // Read an input number.
+reg = reg * int;  // Multiply number by -1.
+output = reg;     // Print the result.

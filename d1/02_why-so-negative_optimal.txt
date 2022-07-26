@@ -5,9 +5,10 @@
 > [output: 2, 5, 9]
 // Any number multiplied by -1 would have the opposite sign.
 // Given a negative number, multiplying the number by -1 would
-// result in a positive number.  This solution is optimal,
-// according to the game.
+// result in a positive number.  No need to store -1 in the
+// "int" register.  We can directly multiply the input by -1.
+// This solution is optimal, according to the game.
 // Lines: 2
 // Steps: 30
-reg = input * -1;
-output = reg;
+reg = input * -1;  // Multiply input number by -1.
+output = reg;      // Print the result.
