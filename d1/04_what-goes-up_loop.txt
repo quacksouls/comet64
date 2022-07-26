@@ -3,11 +3,13 @@
 // We need to output all integers from 1 to 100, inclusive.
 // In a high-level programming language, we would typically
 // use a loop as follows.
+// Lines: 8
+// Steps: 498
 int = 1;                 // Start at 1.
-loop:                    // Start of loop.
-    output = int;        // Ouput the integer.
+loop:                    // Start of "loop".
+    output = int;        // Print the integer.
     int++;               // Increment the current integer.
-    check int < 101;     // If current integer is < 101, then
-    jump if true: loop;  // ...go to the start of the loop.
+    check int < 101;     // Is integer < 101?
+    jump if true: loop;  // If so, go to start of "loop".
     jump if false: end;  // Otherwise, finish the loop.
 end:
