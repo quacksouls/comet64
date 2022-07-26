@@ -5,7 +5,7 @@
 //
 // w := The weight in kilograms (kg).
 // h := The height in metres (m).
-// BMI := w / m^2.
+// BMI := w / h^2.
 //
 // This solution is optimal, according to the game.
 // Lines: 5
