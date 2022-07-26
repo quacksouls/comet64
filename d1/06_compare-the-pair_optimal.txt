@@ -2,10 +2,10 @@
 // Similar to the previous solution.  We can eliminate some
 // lines from the previous solution by noticing that we do
 // not need a jump instruction when the conditional "x > y"
-// is false.  If the conditional "x > y", we jump to the
-// branch that prints x.  Otherwise we print y without having
-// to jump to a different branch.  This solution is optimal,
-// according to the game.
+// is false.  If the conditional "x > y" is true, we jump to
+// the branch that prints x.  Otherwise we print y without
+// having to jump to a different branch.  This solution is
+// optimal, according to the game.
 // Lines: 7
 // Steps: 65
 int = input;          // Read x from input.
