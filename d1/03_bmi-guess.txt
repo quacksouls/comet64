@@ -2,11 +2,16 @@
 > and calculate the BMI (Body Mass Index).  The formula is weight divided
 > by height squares (kg / m^2).
 // We have these definitions:
+//
 // w := The weight in kilograms (kg).
 // h := The height in metres.
 // BMI := w / m^2.
+//
+// This solution is optimal, according to the game.
+// Lines: 5
+// Steps: 50
 int = input;      // First, read the weight.
 reg = input;      // Second, read the height.
 reg = reg * reg;  // The square of the height.
 reg = int / reg;  // The body mass index (BMI).
-output = reg;
+output = reg;     // Print the BMI.
