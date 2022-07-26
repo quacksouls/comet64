@@ -1,15 +1,12 @@
 > Query: Input contains a list of dates.  But some dates are written twice
 > in a row.  Output only the duplicates.
-// Read the years, one at a time.  A year can occur twice in a
-// row.  Output the duplicate years.  The register int always
-// start with 0.  Assume this to be the case and read input
-// into the register reg only.  This solution uses a loop.
-loop:                     // Start of loop.
-    reg = input;          // Read the year from input.
-    check int = reg;      // Are both values the same?
-    jump if true: print;  // If both are same values, print.
+// Similar to the previous solution.  However, we use a loop.
+// This solution is optimal, according to the game.
+// Lines: 6
+// Steps: 90
+loop:                     // Start of "loop".
     int = reg;            // Set current year to latest year.
-    jump if false: loop;  // Go to start of loop.
-print:                    // If both years are the same...
-    output = int;         // ...print the duplicate year.
-    int = reg;            // Set current year to latest year.
+    reg = input;          // Read a year from input.
+    check int = reg;      // Are two year values the same?
+    jump if false: loop;  // If not, go to start of "loop".
+output = int;             // Print the duplicate year.
