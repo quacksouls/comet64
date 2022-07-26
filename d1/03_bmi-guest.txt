@@ -4,7 +4,7 @@
 // We have these definitions:
 //
 // w := The weight in kilograms (kg).
-// h := The height in metres.
+// h := The height in metres (m).
 // BMI := w / m^2.
 //
 // This solution is optimal, according to the game.
