@@ -1,0 +1,14 @@
+> Query: Input contains negative numbers only.  Remove their negativity and
+> output them.
+> Example:
+> [input: -2, -5, -9]
+> [output: 2, 5, 9]
+// Any number multiplied by -1 would have the opposite sign.
+// Given a negative number, multiplying the number by -1 would
+// result in a positive number.
+// Lines: 4
+// Steps: 60
+int = -1;
+reg = input;
+reg = reg * int;
+output = reg;
