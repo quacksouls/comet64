@@ -1,10 +1,17 @@
 > Query: For each 2 values from input, output the greater one.
-// Given two numbers, output the greater number.
-// This solution is optimal, according to the game. 
-int = input;          // Read one number from input.
-reg = input;          // Read another number from input.
-check int > reg;      // Test whether int > reg.
-jump if true: print;  // If int > reg, then print int.
+// Similar to the previous solution.  We can eliminate some
+// lines from the previous solution by noticing that we do
+// not need a jump instruction when the conditional "x > y"
+// is false.  If the conditional "x > y", we jump to the
+// branch that prints x.  Otherwise we print y without having
+// to jump to a different branch.  This solution is optimal,
+// according to the game.
+// Lines: 7
+// Steps: 65
+int = input;          // Read x from input.
+reg = input;          // Read y from input.
+check int > reg;      // Is x > y?
+jump if true: print;  // If so, go to "print".
 int = reg;            // Otherwise, set int to value of reg.
-print:                // The "print" label.
-    output = int;     // Output the value of int.
+print:                // The "print" branch.
+    output = int;     // Print the value of int.

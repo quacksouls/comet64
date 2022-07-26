@@ -1,13 +1,17 @@
 > Query: For each 2 values from input, output the greater one.
-// Given two numbers, output the greater number.
-int = input;           // Read one number from input.
-reg = input;           // Read another number from input.
-check int > reg;       // Check whether int > reg.
-jump if true: left;    // If true, left operand is larger.
-jump if false: right;  // Otherwise, right operand is larger.
+// We read two numbers x and y from input and compare them.
+// If x > y, then the left operand is larger and we print x.
+// Otherwise x <= y and we print the right operand y.
+// Lines: 11
+// Steps: 78
+int = input;           // Read x from input.
+reg = input;           // Read y from input.
+check int > reg;       // Is x > y?
+jump if true: left;    // If true, x is larger.
+jump if false: right;  // Otherwise, x <= y.
 left:                  // Left operand is larger.
-    output = int;      // Write left operand to output.
-    jump to: end;      // Go to end of program.
-right:                 // Right operand is larger.
-    output = reg;      // Write right operand to output.
-end:
+    output = int;      // Write x.
+    jump to: end;      // Go to "end".
+right:                 // Consider the right operand.
+    output = reg;      // Write y.
+end:                   // End of program.
