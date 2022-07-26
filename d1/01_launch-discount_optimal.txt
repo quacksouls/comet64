@@ -4,6 +4,7 @@
 > [input: 100, 20, 45]
 > [output: 80, 16, 36]
 // A 20% discount is the same as 80% of the original value.
-// We must multiply the original value by 0.8.
+// We must multiply the original value by 0.8.  This solution
+// is optimal, according to the game.
 reg = input * 0.8;
 output = reg;
