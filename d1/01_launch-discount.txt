@@ -3,9 +3,10 @@
 > Example:
 > [input: 100, 20, 45]
 > [output: 80, 16, 36]
-// A 20% discount is the same as 80% of the original value.
-// We must multiply the original value by 0.8.
-reg = 0.8;        // Percentage of original value.
-int = input;      // Read original value.
-int = int * reg;  // Value after discount.
-output = int;     // Print the result.
+// Calculate 20% of original value.  Subtract the 20% value
+// from the original value and we have 80% of the original
+// value.
+reg = input;      // Read the original value.
+int = reg * 0.2;  // Calculate 20% of original value.
+reg = reg - int;  // Subtract 20% value from original value.
+output = reg;     // Print the result.
