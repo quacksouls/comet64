@@ -3,9 +3,11 @@
 > Example:
 > [input: -2, -5, -9]
 > [output: 2, 5, 9]
-// Any number multiplied by -1 would have the opposite sign.
-// Given a negative number, multiplying the number by -1 would
-// result in a positive number.
+// Any non-zero number multiplied by -1 would have the
+// opposite sign.  Given a negative number, multiplying the
+// number by -1 would result in a positive number.  We can
+// rule out the possibility of an input being zero because
+// the problem states that each input is a negative number.
 // Lines: 4
 // Steps: 60
 int = -1;         // Store -1 in a register.

@@ -3,11 +3,14 @@
 > Example:
 > [input: -2, -5, -9]
 > [output: 2, 5, 9]
-// Any number multiplied by -1 would have the opposite sign.
-// Given a negative number, multiplying the number by -1 would
-// result in a positive number.  No need to store -1 in the
-// "int" register.  We can directly multiply the input by -1.
-// This solution is optimal, according to the game.
+// Any non-zero number multiplied by -1 would have the
+// opposite sign.  Given a negative number, multiplying the
+// number by -1 would result in a positive number.  We can
+// rule out the possibility of an input being zero because
+// the problem states that each input is a negative number.
+// No need to store -1 in the "int" register.  We can directly
+// multiply the input by -1.  This solution is optimal,
+// according to the game.
 // Lines: 2
 // Steps: 30
 reg = input * -1;  // Multiply input number by -1.
