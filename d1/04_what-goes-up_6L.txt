@@ -1,0 +1,15 @@
+> Query: Ignore the input for now and output all the numbers from 1 to
+> 100, inclusive
+// Similar to the previous solution.  We can shave off a few
+// lines by noticing that, from the previous solution, the
+// last two lines are not necessary.  If the loop conditional
+// is false, then we automatically exit the loop and reach
+// the end of the program.
+// Lines: 6
+// Steps: 498
+int = 1;                 // Start at 1.
+loop:                    // Start of "loop".
+    output = int;        // Print the integer.
+    int++;               // Increment the integer.
+    check int < 101;     // Is integer < 101?
+    jump if true: loop;  // If so, go to start of "loop".
