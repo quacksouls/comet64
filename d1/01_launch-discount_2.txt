@@ -1,0 +1,12 @@
+> Query: Read the values from input and write them to output after a discount
+> of 20 percent.
+> Example:
+> [input: 100, 20, 45]
+> [output: 80, 16, 36]
+// Calculate 20% of original value.  Subtract the 20% value
+// from the original value and we have 80% of the original
+// value.
+reg = input;      // Read the original value.
+int = reg * 0.2;  // Calculate 20% of original value.
+reg = reg - int;  // Subtract 20% value from original value.
+output = reg;     // Print the result.
