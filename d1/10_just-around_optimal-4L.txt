@@ -12,6 +12,6 @@
 // x is the same as the integer part of a floating point
 // number x.  This solution is optimal, according to the game.
 reg = input / 10;  // Divide the input by 10.
-int = reg + 0.5;   // Round to nearest integer.
+int = reg + 0.5;   // floor(x + 0.5)
 int = int * 10;    // Multiply by 10 to undo division.
 output = int;      // Print the result.
