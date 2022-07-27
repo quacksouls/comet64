@@ -1,0 +1,23 @@
+> Query: Input contains decimal numbers only.  Round them to the nearest
+> integer before outputting.
+> Example:
+> [input: 2.3, 7.8, 15.5]
+> [output: 2, 8, 16]
+// This solution exploits how floating point numbers are
+// represented and handled in the Comet 64 computer.  The
+// computer allows for up to two decimal digits following
+// the decimal point.  If a floating point number cannot
+// fit in the representation used by the computer, then
+// the third decimal digit is rounded.  The rounding rule
+// is rounding half up.  For example, the number 1.123 is
+// rounded to 1.12 and 1.125 is rounded to 1.13.  To round
+// an input number to the nearest integer, we divide the
+// input by 100 so the computer would round the result to
+// two decimal places.  Then multiply the rounded number by
+// 100 to obtain the rounded integer.  This solution is
+// optimal, according to the game.
+// Lines: 3
+// Steps: 45
+reg = input / 100;  // Divide by 100 to trigger rounding.
+int = reg * 100;    // Multiply by 100 to get rounded integer.
+output = int;       // Print the rounded integer.
