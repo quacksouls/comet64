@@ -3,8 +3,6 @@
 // Similar to the previous solution.  We do not use an
 // explicit loop.  This solution is optimal, according to
 // the game.
-// Lines: 6
-// Steps: 86
 reg = input;        // Read the year from input.
 check int = reg;    // Are both values the same?
 jump if false: end; // If not, go to "end".

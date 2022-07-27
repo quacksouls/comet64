@@ -3,8 +3,6 @@
 // We need to output all integers from 1 to 100, inclusive.
 // In a high-level programming language, we would typically
 // use a loop as follows.
-// Lines: 8
-// Steps: 498
 int = 1;                 // Start at 1.
 loop:                    // Start of "loop".
     output = int;        // Print the integer.

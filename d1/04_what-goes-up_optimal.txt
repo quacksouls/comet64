@@ -6,7 +6,5 @@
 // us 1 and we can output that value.  Continue incrementing
 // and outputting until we have output all required integers.
 // This solution is optimal, according to the game.
-// Lines: 2
-// Steps: 200
 int++;         // Increment the integer.
 output = int;  // Print the integer.

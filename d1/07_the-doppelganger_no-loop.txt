@@ -6,8 +6,6 @@
 // into the register "reg" only.  We print only if two
 // consecutive values from input are the same.  This solution
 // does not use a loop.
-// Lines: 8
-// Steps: 104
 reg = input;          // Read the year from input.
 check int = reg;      // Are both values the same?
 jump if true: print;  // If so, go to "print".

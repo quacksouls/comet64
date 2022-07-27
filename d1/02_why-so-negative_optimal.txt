@@ -11,7 +11,5 @@
 // No need to store -1 in the "int" register.  We can directly
 // multiply the input by -1.  This solution is optimal,
 // according to the game.
-// Lines: 2
-// Steps: 30
 reg = input * -1;  // Multiply input number by -1.
 output = reg;      // Print the result.

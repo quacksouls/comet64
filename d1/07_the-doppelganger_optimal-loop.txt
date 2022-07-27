@@ -2,8 +2,6 @@
 > in a row.  Output only the duplicates.
 // Similar to the previous solution.  However, we use a loop.
 // This solution is optimal, according to the game.
-// Lines: 6
-// Steps: 90
 loop:                     // Start of "loop".
     int = reg;            // Set current year to latest year.
     reg = input;          // Read a year from input.

@@ -5,8 +5,6 @@
 > [output: 80, 16, 36]
 // A 20% discount is the same as 80% of the original value.
 // We must multiply the original value by 0.8.
-// Lines: 4
-// Steps: 60
 reg = 0.8;        // Percentage of original value.
 int = input;      // Read original value.
 int = int * reg;  // Value after discount.

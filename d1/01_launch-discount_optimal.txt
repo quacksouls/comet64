@@ -9,7 +9,5 @@
 // multiply the input value by 0.8, store the result to a
 // register, and print the content of the register.  This
 // solution is optimal, according to the game.
-// Lines: 2
-// Steps: 30
 reg = input * 0.8;  // Multiply original value by 0.8.
 output = reg;       // Print the result.

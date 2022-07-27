@@ -5,8 +5,6 @@
 // We do not need an explicit loop because the game loops back
 // to the start of the program once it has read the last line
 // of code.  This solution is optimal, according to the game.
-// Lines: 3
-// Steps: 302
 reg = 100 - int;  // Subtract content of int from 100.
 output = reg;     // Print the result of the subtraction.
 int++;            // Increment int.

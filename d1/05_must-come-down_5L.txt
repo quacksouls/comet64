@@ -3,8 +3,6 @@
 // printing integers to output.  The program stops as soon as
 // the game detects we have printed the required number of
 // integers.  This solution is optimal, according to the game.
-// Lines: 5
-// Steps: 403
 int = 100;          // Start at 100.
 loop:               // Start of "loop".
     output = int;   // Print the integer.

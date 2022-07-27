@@ -2,8 +2,6 @@
 // We read two numbers x and y from input and compare them.
 // If x > y, then the left operand is larger and we print x.
 // Otherwise x <= y and we print the right operand y.
-// Lines: 11
-// Steps: 78
 int = input;           // Read x from input.
 reg = input;           // Read y from input.
 check int > reg;       // Is x > y?

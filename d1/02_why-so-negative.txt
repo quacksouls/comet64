@@ -8,8 +8,6 @@
 // number by -1 would result in a positive number.  We can
 // rule out the possibility of an input being zero because
 // the problem states that each input is a negative number.
-// Lines: 4
-// Steps: 60
 int = -1;         // Store -1 in a register.
 reg = input;      // Read an input number.
 reg = reg * int;  // Multiply number by -1.

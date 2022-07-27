@@ -2,8 +2,6 @@
 // We need to output all integers starting from 100 and count
 // down to 0.  The count should include both 100 and 0.  This
 // solution uses a loop.
-// Lines: 8
-// Steps: 603
 int = 100;                // Start at 100.
 loop:                     // Start of "loop".
     output = int;         // Print the integer.

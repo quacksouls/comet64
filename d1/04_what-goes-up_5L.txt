@@ -8,8 +8,6 @@
 // loop conditional.  Use a loop to print as many integers as
 // necessary.  Once the game detects we have output the
 // required number of integers, the program ends.
-// Lines: 5
-// Steps: 399
 int = 1;            // Start at 1.
 loop:               // Start of "loop".
     output = int;   // Print the integer.

@@ -6,8 +6,6 @@
 // the branch that prints x.  Otherwise we print y without
 // having to jump to a different branch.  This solution is
 // optimal, according to the game.
-// Lines: 7
-// Steps: 65
 int = input;          // Read x from input.
 reg = input;          // Read y from input.
 check int > reg;      // Is x > y?

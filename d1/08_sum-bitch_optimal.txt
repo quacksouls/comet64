@@ -5,8 +5,6 @@
 // Similar to the previous solution.  We remove an explicit
 // jump if the conditional is true.  This solution is optimal,
 // according to the game.
-// Lines: 7
-// Steps: 108
 int = input;         // Read the input number.
 reg = reg + int;     // Update the cumulative sum.
 check int = 0;       // Is the current input = 0?

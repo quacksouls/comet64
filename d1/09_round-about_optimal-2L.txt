@@ -9,7 +9,5 @@
 // function.  The floor(x) function of a floating point number
 // x is equivalent to the integer part of x.  This solution is
 // optimal, according to the game.
-// Lines: 2
-// Steps: 30
 int = input + 0.5;  // The floor(x + 0.5) function.
 output = int;       // Print the rounded integer.
