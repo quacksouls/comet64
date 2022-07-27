@@ -1,0 +1,21 @@
+> Query: Input contains integer numbers only.  Round them to the nearest
+> 10 before outputting.
+> Example:
+> [input: 7, 26, 113]
+> [output: 10, 30, 110]
+// This solution exploits how floating point numbers are
+// represented and handled in the Comet 64 computer.  The
+// computer allows for up to two decimal digits following
+// the decimal point.  If a floating point number cannot
+// fit in the representation used by the computer, then
+// the third decimal digit is rounded.  The rounding rule
+// is rounding half up.  For example, the number 1.123 is
+// rounded to 1.12 and 1.125 is rounded to 1.13.  To round
+// an input number to the nearest tens, we divide the
+// input by 1000 so the computer would round the result to
+// two decimal places.  Then multiply the rounded number by
+// 1000 to obtain the integer rounded to the nearest tens.
+// This solution is optimal, according to the game.
+reg = input / 1000;  // Round to 2 decimal places.
+int = reg * 1000;    // Integer rounded to nearest tens.
+output = int;        // Print rounded number.
