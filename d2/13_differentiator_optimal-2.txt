@@ -16,4 +16,4 @@
 int = input - input;  // d := a - b
 int = int * int;      // d^2
 check int > 25;       // Is d^2 > 25?
-output = bool;        // Print result of test.
+output = bool;        // Print the boolean result.

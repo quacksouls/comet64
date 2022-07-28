@@ -6,9 +6,9 @@
 // function.  Print "true" if c > 5; print "false" otherwise.
 int = input;           // Read the first input.
 int = input - int;     // Difference between two input values.
-check int < 0;         // Test whether difference is negative.
-jump if false: print;  // If non-negative, then go to "print".
-int = int * -1;        // If negative, convert to positive.
-print:                 // The "print" label.
-    check int > 5;     // Test whether difference is > 5.
-    output = bool;     // Print "true" or "false".
+check int < 0;         // Is the difference negative?
+jump if false: print;  // If non-negative, go to "print".
+int = int * -1;        // Otherwise, convert to positive.
+print:                 // The "print" branch.
+    check int > 5;     // Is difference > 5.
+    output = bool;     // Print the boolean result.
