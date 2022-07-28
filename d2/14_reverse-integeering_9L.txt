@@ -6,7 +6,7 @@
 // Switch the digits of a 2-digit integer.  Isolate the tens
 // and units digits.  Let a be the tens digit and let b be the
 // units digit.  If we are given a 2-digit integer as
-// x := 10*a + b, then we output 10*b + a.  The tens digit is
+// x := 10*a + b, then we output 10*b + a.  The tens digit
 // is defined as a := floor(x / 10).  The units digit is
 // defined as b := x mod 10, where mod is the remainder
 // operator.  We also have the definition b := x - 10a.  This
