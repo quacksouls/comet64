@@ -10,20 +10,20 @@
 // We only need to keep track of the number of tails.  Here we
 // assume that the register "int" is initially zero.  This
 // solution is optimal, according to the game.
-loop:
-    check input = null;
-    jump if true: winner;
-    check input = tails;
-    jump if false: loop;
-    int++;
-    jump to: loop;
-winner:
-    check int = 50;
-    jump if true: draw;
-    check int > 50;
-    jump if true: tails;
-    output = heads;
-draw:
-    output = draw;
-tails:
-    output = tails;
+loop:                      // Start of "loop".
+    check input = null;    // Any more coin results?
+    jump if true: winner;  // If not, go to "winner".
+    check input = tails;   // Is it tails?
+    jump if false: loop;   // If not, go to "loop".
+    int++;                 // Otherwise, increment #tails.
+    jump to: loop;         // Go to "loop".
+winner:                    // The "winner" branch.
+    check int = 50;        // Is it a draw?
+    jump if true: draw;    // If so, go to "draw".
+    check int > 50;        // Is tails the winner?
+    jump if true: tails;   // If so, go to "tails".
+    output = heads;        // Otherwise, heads is the winner.
+draw:                      // The "draw" branch.
+    output = draw;         // A draw.
+tails:                     // The "tails" branch.
+    output = tails;        // Tails is the winner.
