@@ -10,7 +10,7 @@
 // is defined as a := floor(x / 10).  The units digit is
 // defined as b := x mod 10, where mod is the remainder
 // operator.  We also have the definition b := x - 10a.
-reg = input;      // Read the input number.
+reg = input;      // Read in x.
 int = reg / 10;   // The tens digit.
 switch int;       // Store the tens digit.
 int = reg / 10;   // The quotient a := x / 10.

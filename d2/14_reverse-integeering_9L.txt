@@ -12,10 +12,10 @@
 // operator.  We also have the definition b := x - 10a.  This
 // suggests that the units digit can be obtained by repeated
 // subtraction from 10.
-reg = input;                  // Read the 2-digit integer.
-int = reg / 10;               // The quotient floor(x / 10).
+reg = input;                  // Read in x.
+int = reg / 10;               // The tens digit.
 subtract:                     // The "subtract" branch.
-    reg = reg - 10;           // Subtract from 10.
+    reg = reg - 10;           // Subtract 10.
     check reg < 10;           // Is the result < 10?
     jump if false: subtract;  // If not, subtract again.
 reg = reg * 10;               // The tens digit of new number.
