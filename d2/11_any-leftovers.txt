@@ -1,0 +1,13 @@
+> Query: Read values from input.  Divide them by 4 and write the
+> remainders to output.
+> Example:
+> [input: 12, 11, 6]
+> [output: 0, 3, 2]
+// Let x := x - 4.  If the result is less than 4, we have the
+// remainder.  Otherwise repeat the subtraction process.
+int = input;                  // Read in x.
+subtract:                     // The "subtract" branch.
+    int = int - 4;            // x := x - 4
+    check int < 4;            // Is x < 4?
+    jump if false: subtract;  // If not, go to "subtract".
+output = int;                 // Print the remainder.
