@@ -10,11 +10,11 @@
 // number n := 4 * q and the remainder can be calculated as
 // r := x - n.  This solution is optimal, according to the
 // game.
-reg = input;         // Read the input.
+reg = input;         // Read in x.
 int = reg / 4;       // The quotient q := floor(x / 4).
 int = 4 * int;       // The number n := 4 * q.
 int = reg - int;     // The remainder r := x - n.
-check int = 3;       // Test if the remainder is 3.
-jump if false: end;  // The remainder is not 3, go to "end".
-output = reg;        // Print the original number.
+check int = 3;       // Is the remainder = 3?
+jump if false: end;  // If not, go to "end".
+output = reg;        // Print x.
 end:                 // End of program.
