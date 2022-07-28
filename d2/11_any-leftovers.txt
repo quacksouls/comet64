@@ -3,8 +3,9 @@
 > Example:
 > [input: 12, 11, 6]
 > [output: 0, 3, 2]
-// Let x := x - 4.  If the result is less than 4, we have the
-// remainder.  Otherwise repeat the subtraction process.
+// Assume the input number x is at least 4.  Let x := x - 4.
+// If the result is less than 4, we have the remainder.
+// Otherwise repeat the subtraction process.
 int = input;                  // Read in x.
 subtract:                     // The "subtract" branch.
     int = int - 4;            // x := x - 4
