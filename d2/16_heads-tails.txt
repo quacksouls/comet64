@@ -3,7 +3,9 @@
 > then output "draw".
 // Use the registers "reg" and "int" to keep track of the
 // number of heads and tails, respectively.  If there are
-// no more input, we print the winner.
+// no more input, we print the winner.  No need for an
+// explicit loop.  Upon reaching the end of the program,
+// the game would loop back to the start of the program.
 check input = null;            // Any more coin results?
 jump if true: print;           // No more results, then print.
 check input = heads;           // Is it heads?
