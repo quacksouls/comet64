@@ -5,15 +5,15 @@
 // Cannot assume that all numbers are positive, hence cannot
 // use the initial value of "int" as zero.
 int = input;               // Read first number.
-start:                     // The "start" branch.
+loop:                      // The "loop" branch.
     check input = null;    // More numbers?
     jump if true: print;   // If no more, print maximum.
     reg = input;           // Read the next input.
     check int < reg;       // Is current max < input?
     jump if true: newMax;  // If so, go to "newMax".
-    jump to: start;        // Otherwise, go to "start".
+    jump to: loop;         // Otherwise, go to "loop".
 print:                     // The "print" branch.
     output = int;          // Print the maximum number.
 newMax:                    // The "newMax" branch.
     int = reg;             // The new maximum value.
-    jump to: start;        // Branch to "start".
+    jump to: loop;         // Go to "loop".
