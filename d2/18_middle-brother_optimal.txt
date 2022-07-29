@@ -1,0 +1,24 @@
+> Query: Read 3 input values in a row.  Output the middle of 3 numbers.
+> Repeat.
+// Similar to the previous solution.  However, we remove a few
+// unnecessary lines.  Try to always have "reg" store the
+// middle value.  This solution is optimal, according to the
+// game.
+int = input;              // Read in x.
+reg = input;              // Read in y.
+check int < reg;          // Is x < y?
+jump if true: less;       // If so, go to "less".
+switch int;               // Store "int" in memory.
+int = reg;                // int := reg
+switch reg;               // Get previous value of "int".
+less:                     // The "less" branch.
+    switch int;           // Store value of min(x, y).
+    int = input;          // Read in z.
+    check reg < int;      // Is y < z?
+    jump if true: print;  // If so, go to "print".
+    switch reg;           // Retrieve value of min(x, y).
+    check reg > int;      // Is min(x, y) > z?
+    jump if true: print;  // If so, go to "print".
+    reg = int;            // z := x
+print:                    // The "print" branch.
+    output = reg;         // Print the middle value.
