@@ -2,7 +2,8 @@
 > input to the next input until it comes as near to 21 as possible without
 > exceeding it.  Output the nearest values.
 // Similar to the previous solution.  However, we remove a
-// jump instruction and use only one print statement.
+// jump instruction and use only one print statement.  This
+// solution is optimal, according to the game.
 loop:                     // Start of "loop".
     check input = null;   // Any more numbers?
     jump if true: print;  // If no more, go to "print".
