@@ -2,13 +2,16 @@
 > only that.
 // Calculate the arithmetic mean of a bunch of numbers.  We
 // assume that each of the registers "int" and "reg" is
-// initially set to zero.
+// initially set to zero.  Read a number from input and keep
+// track of the cumulative sum.  We also keep track of how
+// many numbers we have read so far.  If there are no more
+// input values, calculate and print the average.
 int++;                // How many numbers read so far.
 reg = reg + input;    // The cumulative sum.
-check input = null;   // Whether we run out of numbers.
-jump if true: print;  // If true, branch to "print".
-jump if false: end;   // Otherwise, branch to "end".
+check input = null;   // Any more numbers?
+jump if true: print;  // If not, go to "print".
+jump to: end;         // Otherwise, go to "end".
 print:                // The "print" branch.
     reg = reg / int;  // The arithmetic mean.
-    output = reg;     // Print the arithmetic mean.
-end:                  // The "end" branch.
+    output = reg;     // Print the average.
+end:                  // End of program.
