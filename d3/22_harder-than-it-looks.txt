@@ -10,7 +10,7 @@
 // The expression 10 * (x - 1) = 10*x - 10 is an integer so
 // it can be stored in the "int" register.  We store x / 10
 // in the "reg" register.
-reg = input;      // Read the number.
+reg = input;      // Read the number x.
 int = 10 * reg;   // 10*x
 int = int - 10;   // 10*x - 10
 reg = reg / 10;   // x / 10
