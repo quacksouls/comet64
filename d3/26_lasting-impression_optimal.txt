@@ -1,5 +1,8 @@
 > Query: Output the last character of each string in input.
-// Print the last character of an input string.
+// Similar to the previous solution.  However, the index of
+// the last character can be calculated in one instruction,
+// instead of two.  This solution is optimal, according to
+// the game.
 str = input;           // Read the input string.
 int = str.length - 1;  // Index of the last character.
 char = str[int];       // The last character.
