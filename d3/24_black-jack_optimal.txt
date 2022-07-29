@@ -1,0 +1,16 @@
+> Query: Input contains the values of a deck of cards.  Keep adding the
+> input to the next input until it comes as near to 21 as possible without
+> exceeding it.  Output the nearest values.
+// Similar to the previous solution.  However, we remove a
+// jump instruction and use only one print statement.
+loop:                     // Start of "loop".
+    check input = null;   // Any more numbers?
+    jump if true: print;  // If no more, go to "print".
+    reg = input;          // Otherwise, read next value.
+    int = reg + int;      // Update cumulative sum.
+    check int > 21;       // Is sum > 21?
+    jump if false: loop;  // If not, go to "loop".
+    int = int - reg;      // Otherwise, use previous value.
+print:                    // The "print" branch.
+    output = int;         // Print whatever is in "int".
+    int = reg;            // Now start with current input.
