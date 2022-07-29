@@ -1,0 +1,28 @@
+> Query: Read 3 input values in a row.  Output the greatest of 3 numbers.
+> Repeat.
+// Determine the maximum of 3 numbers.  Let x, y, z be three
+// numbers read in a row.  We have these cases:
+//
+// (1) x < y and y < z, so max = z
+// (2) x < y and z <= y, so max = y
+// (3) y <= x and x < z, so max = z
+// (4) y <= x and z <= x, so max = x
+int = input;             // Read in x.
+reg = input;             // Read in y.
+check int < reg;         // Is x < y?
+jump if false: ylessx;   // If not, go to "ylessx".
+int = input;             // Read in z.
+check reg < int;         // Is y < z?
+jump if true: zmax;      // If so, go to "zmax".
+output = reg;            // Otherwise, y is maximum.
+jump to: end;            // Go to "end".
+ylessx:                  // y <= x
+    reg = int;           // Set x := y.
+    int = input;         // Read in z.
+    check reg < int;     // Is x < z?
+    jump if true: zmax;  // If so, go to "zmax".
+    output = reg;        // Otherwise, print x.
+    jump to: end;        // Go to "end".
+zmax:                    // Maximum is z.
+    output = int;        // Print z.
+end:                     // End of program.
