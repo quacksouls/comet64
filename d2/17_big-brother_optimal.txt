@@ -1,16 +1,22 @@
 > Query: Read 3 input values in a row.  Output the greatest of 3 numbers.
 > Repeat.
-// Determine the maximum of 3 numbers.  This solution is
-// optimal, according to the game.
-int = input;              // Read the first number.
-reg = input;              // Read the second number.
-check int < reg;          // Test whether first < second.
-jump if true: less;       // If first < second, go to "less".
-reg = int;                // Otherwise, first >= second.
+// Let x, y, z be three numbers read in a row.  Let the
+// registers "int" and "reg" hold the values of x and y,
+// respectively.  Note the symmetry between x < y and y <= x.
+// In particular, consider the symmetry between cases (1) and
+// (2), and cases (3) and (4).  If x < y, use "int" to store
+// the value of z.  If y <= x, we set reg := int and use "int"
+// to store the value of z.  In both cases, reg := max(x, y).
+// This solution is optimal, according to the game.
+int = input;              // Read in x.
+reg = input;              // Read in y.
+check int < reg;          // Is x < y?
+jump if true: less;       // If so, go to "less".
+reg = int;                // Otherwise, set reg := int.
 less:                     // The "less" branch.
-    int = input;          // Read the third number.
-    check int < reg;      // Test whether 3rd < current max.
-    jump if true: print;  // Go to "print".
+    int = input;          // Read in z.
+    check int < reg;      // Is z < max(x, y)?
+    jump if true: print;  // If so, go to "print".
     reg = int;            // The max of all 3 numbers.
 print:                    // The "print" branch.
-    output = reg;         // Output the maximum.
+    output = reg;         // Print the maximum.
