@@ -24,8 +24,8 @@ loop:                     // Start of "loop".
     output = reg;         // Print F_n.
     reg = reg * 1.618;    // phi * F_n
     switch int;           // Store max value.
-    int = reg + 0.5;      // floor(phi*F_n + 0.5)
+    int = reg + 0.5;      // F_{n+1} := floor(phi*F_n + 0.5)
     reg = int;            // Copy result to register "reg".
     switch int;           // Retrieve max value.
-    check reg > int;      // Is F_n > max value?
+    check reg > int;      // Is F_{n+1} > max value?
     jump if false: loop;  // If not, go to "loop".
