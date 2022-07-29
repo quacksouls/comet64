@@ -1,0 +1,40 @@
+> Query: Read 3 input values in a row.  Output the middle of 3 numbers.
+> Repeat.
+// Let x, y, z be three numbers.  We have these cases:
+//
+// (1) x < y and y < z, so middle is y.
+// (2) x < y, z <= y, x < z, so middle is z.
+// (3) x < y, z <= y, z <= x, so middle is x.
+// (4) y <= x and x < z, so middle is x.
+// (5) y <= x, z <= x, y < z, so middle is z.
+// (6) y <= x, z <= x, z <= y, so middle is y.
+//
+// Notice the symmetry between the cases of x < y and
+// y <= x.  Let the registers "int" and "reg" hold the values
+// of x and y, respectively.  If x < y, we proceed with cases
+// (1) to (3) as per above.  Otherwise y <= x, we swap the
+// values of "int" and "reg", and proceed as per cases (1) to
+// (3).
+int = input;                // Read in x.
+reg = input;                // Read in y.
+check int < reg;            // Is x < y?
+jump if true: less;         // If so, go to "less".
+switch int;                 // Store "int" in memory.
+int = reg;                  // int := reg
+switch reg;                 // Get previous value of "int".
+less:                       // The "less" branch.
+    switch int;             // Store value of min(x, y).
+    int = input;            // Read in z.
+    check reg < int;        // Is y < z?
+    jump if true: ymiddle;  // If so, go to "ymiddle".
+    switch reg;             // Retrieve value of min(x, y).
+    check reg < int;        // Is min(x, y) < z?
+    jump if true: zmiddle;  // If so, go to "zmiddle".
+    output = reg;           // Otherwise, print x.
+    jump to: end;           // Go to "end".
+ymiddle:                    // The "ymiddle" branch.
+    output = reg;           // Print y.
+    jump to: end;           // Go to "end".
+zmiddle:                    // The "zmiddle" branch.
+    output = int;           // Print z.
+end:                        // End of program.
