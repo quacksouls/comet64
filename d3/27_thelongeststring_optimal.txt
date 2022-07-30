@@ -10,7 +10,7 @@ loop:
     int = str.length;     // How many characters in the string.
     check reg < int;      // New string has more characters?
     jump if false: loop;  // If not, go to "end".
-    reg = int;            // Otherwise, note length
+    reg = int;            // Otherwise, note larger length.
     switch str;           // Store the new string.
     jump to: loop;        // Go to "loop".
 print:                    // The "print" branch.
