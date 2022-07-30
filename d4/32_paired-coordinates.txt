@@ -4,7 +4,8 @@
 > [input: 2, 5, 0, 4]
 > [output: (2,0), (5,4)]
 // We are given x_1, x_2, y_1, y_2.  We must output (x_1, y_1)
-// and (x_2, y_2).
+// and (x_2, y_2).  This solution is optimal, according to
+// the game.
 int = input;        // x_1
 reg = input;        // x_2
 switch reg;         // Store x_2 in memory.
