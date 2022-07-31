@@ -16,6 +16,6 @@ loop:                     // Start of "loop".
     reg = reg - int;      // n := n - k
     check reg = 0;        // Is n = 0?
     jump if false: loop;  // If not, go to "loop".
-int = int / 2;            // floor(int /2)
-int++;                    // floor(int /2) + 1
+int = int / 2;            // floor(k / 2)
+int++;                    // floor(k / 2) + 1
 output = int;             // Print the square root.
