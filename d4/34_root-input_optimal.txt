@@ -6,6 +6,7 @@
 // Similar to the previous solution.  However, instead of
 // checking for reg = 0, we check for reg < 0.  If reg < 0,
 // then floor(int / 2) yields the number of odd integers used.
+// This solution is optimal, according to the game.
 reg = input;              // Read perfect square n^2.
 int = -1;                 // Start from -1.
 loop:                     // Start of "loop".
