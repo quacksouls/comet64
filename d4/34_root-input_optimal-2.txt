@@ -14,7 +14,7 @@
 reg = 5 * input;          // a := 5*n
 int = 0;                  // b := 0
 loop:                     // Start of "loop".
-    reg = reg - int;      // a := a - b;
+    reg = reg - int;      // a := a - b
     int = int + 10;       // b := b + 10
     check reg < int;      // Is a < b?
     jump if false: loop;  // If not, go to "loop".
