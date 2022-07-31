@@ -1,0 +1,17 @@
+> Query: Input contains only perfect squares (1, 4, 9, 16, 25, 36, 49, 81, 100).
+> Calculate the square root for each input and output the result.
+> Example:
+> [input: 16, output: 4]
+> [input: 36, output: 6]
+// Let n > 0 be a perfect square.  The idea is to iterate over
+// each integer i > 0 and determine whether i^2 = n.
+reg = input;              // Read the perfect square.
+int = 0;                  // Start i from zero.
+loop:                     // Start of "loop".
+    int++;                // Increment the integer i.
+    char = int;           // Store current integer i.
+    int = int * int;      // i^2
+    check reg = int;      // Is n = i^2?
+    int = char;           // Current integer i.
+    jump if false: loop;  // If not, go to "loop".
+output = int;             // Print the square root.
