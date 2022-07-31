@@ -3,15 +3,32 @@
 > Example:
 > [input: 16, output: 4]
 > [input: 36, output: 6]
-// Let n > 0 be a perfect square.  The idea is to iterate over
-// each integer i > 0 and determine whether i*i = n.
-reg = input;              // Read the input perfect square
-int = 0;                  // The current integer i.
+// Let n > 0 be an integer.  Use the fact that n^2 can be
+// written as the series
+//
+// n^2 = 1^2 + 3^2 + 5^2 + 7^2 + ... + (2k + 1)^2
+//
+// for some integer k > 0.  There are n terms in the series.
+// The above expression tells us that n^2 can be written as
+// the sum of the first n odd non-negative integers.  To
+// determine the square root of n^2, start from 1 and note
+// n := n - 1.  Continue with n := n - 3 and so on.  Each time
+// we subtract the next odd integer until n = 0.  The number
+// of odd integers used in the subtraction is the same as the
+// square root of n^2.
+//
+// https://www.geeksforgeeks.org/how-to-find-square-root-of-a-number/
+//
+// We use the string register "str" to help us keep track of
+// how many odd integers we consider.
+str = ;                   // Empty string.
+reg = input;              // Read in the perfect square n^2.
+int = -1;                 // Start from -1.
 loop:                     // Start of "loop".
-    int++;                // Increment the integer i.
-    char = int;           // Store current integer i.
-    int = int * int;      // i*i
-    check reg = int;      // Is n = i*i?
-    int = char;           // Current integer i.
-    jump if false: loop;  // If not, go to start of "loop".
+    int = int + 2;        // Odd non-negative integer k.
+    reg = reg - int;      // n := n - k
+    str = str + a;        // Used another odd integer.
+    check reg = 0;        // Is n = 0?
+    jump if false: loop;  // If not, go to "loop".
+int = str.length;         // How many odd integers used.
 output = int;             // Print the square root.
