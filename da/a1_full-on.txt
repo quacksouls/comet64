@@ -7,10 +7,10 @@
 //
 // Encode the pattern as a string.  Check each character of
 // the string and print the boolean result.
-str = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx;
-loop:
-    char = str[int];
-    check char = x;
-    output = bool;
-    int++;
-    jump to: loop;
+str = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx;  // Encoded pattern.
+loop:                 // Start of "loop".
+    char = str[int];  // Character str[i].
+    check char = x;   // Is str[i] = x?
+    output = bool;    // Print boolean value.
+    int++;            // Increment index i.
+    jump to: loop;    // Go to "loop".
