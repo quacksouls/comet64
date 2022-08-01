@@ -9,8 +9,8 @@
 // the string and print the boolean result.
 str = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx;  // Encoded pattern.
 loop:                 // Start of "loop".
-    char = str[int];  // Character str[i].
-    check char = x;   // Is str[i] = x?
+    char = str[int];  // Character at index i.
+    check char = x;   // Is character = x?
     output = bool;    // Print boolean value.
     int++;            // Increment index i.
     jump to: loop;    // Go to "loop".
