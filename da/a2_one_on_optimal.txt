@@ -5,6 +5,6 @@
 // value of the register and print the boolean result.
 // Then increment the value of the register.  This solution is
 // optimal, according to the game.
-check int = 0;
-output = bool;
-int++;
+check int = 0;  // Is i = 0?
+output = bool;  // Print boolean result.
+int++;          // Increment i.

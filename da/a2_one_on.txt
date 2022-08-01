@@ -1,7 +1,9 @@
 > Task: Make both grid patterns identical.  First grid can be written by
 > outputting true or false.  Second grid shows the solution.
-// Only the first square is true.  All other squares are false.
-output = true;
-loop:
-    output = false;
-    jump to: loop;
+// Only the first square is true.  All other squares are
+// false.  Print true for the first square.  Use a loop to
+// print false for all other squares.
+output = true;       // Print true.
+loop:                // Start of "loop".
+    output = false;  // Print false.
+    jump to: loop;   // Go to "loop".
