@@ -1,0 +1,20 @@
+> Query: Zero marks the end of a package.  Output the first negative number
+> in every package.  If a package doesn't contain a negative number,
+> output zero instead.
+// Similar to the previous solution.  However, we removed a
+// jump instruction and removed a label.  This solution is
+// optimal, according to the game.
+reg = input;              // Read a number n.
+check reg < 0;            // Is n < 0?
+jump if true: print;      // If so, go to "print".
+check reg = 0;            // Is number = 0?
+jump if false: end;       // If not, go to "end".
+output = 0;               // Print zero.
+jump to: end;             // Go to "end".
+print:                    // The "print" branch.
+    output = reg;         // Print the first negative number.
+loop:                     // Start of "loop".
+    reg = input;          // Read input number.
+    check reg = 0;        // Is number = 0?
+    jump if false: loop;  // If not, go to "loop".
+end:                      // End of program.
