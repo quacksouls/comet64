@@ -3,6 +3,6 @@
 // The first 31 squares are shaded, whereas square number 32
 // is unshaded.  Print true for the first 31 squares.  This
 // solution is optimal, according to the game.
-check int < 31;
-output = bool;
-int++;
+check int < 31;  // Have we shaded 31 squares yet?
+output = bool;   // Print boolean result.
+int++;           // Increment count.

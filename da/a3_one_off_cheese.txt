@@ -1,10 +1,10 @@
 > Task: Make both grid patterns identical.  First grid can be written by
 > outputting true or false.  Second grid shows the solution.
 // Use a string to encode the solution.  Check whether the
-// character str[i] is "I" and print the boolean result.  This
+// character str[i] is "x" and print the boolean result.  This
 // solution is optimal, according to the game.
-str = IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIo;
-char = str[int];
-check char = I;
-output = bool;
-int++;
+str = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxo;  // Encoded pattern.
+char = str[int];  // Character at index i.
+check char = x;   // Is character = x?
+output = bool;    // Print boolean result.
+int++;            // Increment index.

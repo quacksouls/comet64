@@ -5,13 +5,14 @@
 //
 // xxxx
 //
-// 7 times.  Then print the pattern xxxo.
-loop:
-    output = true;
-    int++;
-    check int < 28;
-    jump if true: loop;
+// 7 times, i.e. shade 28 squares.  Then print the pattern
+// xxxo.
+loop:                    // Start of "loop".
+    output = true;       // Shade the square.
+    int++;               // How many squares shaded.
+    check int < 28;      // Shade another square?
+    jump if true: loop;  // If so, go to "loop".
+output = true;           // Shade 3 squares.
 output = true;
 output = true;
-output = true;
-output = false;
+output = false;          // Do not shade last square.
