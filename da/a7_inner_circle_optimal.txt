@@ -1,0 +1,22 @@
+> Task: Make both grid patterns identical.  First grid can be written by
+> outputting true or false.  Second grid shows the solution.
+// Start by unshading 7 squares.  Then we have the pattern
+// ooxx repeated 4 times.  The program then starts from the
+// beginning to unshade another 7 squares.  The remaining
+// 2 squares can be unshaded by the code that print the
+// pattern ooxx. This solution is optimal.
+output = false;          // Unshade 7 squares.
+output = false;          //
+output = false;          //
+output = false;          //
+output = false;          //
+output = false;          //
+output = false;          //
+loop:                    // Start of "loop".
+    output = false;      // Unshade.
+    output = false;      // Unshade.
+    output = true;       // Shade.
+    output = true;       // Shade.
+    int++;               // How many ooxx have we printed?
+    check int < 4;       // Have we printed ooxx 4 times?
+    jump if true: loop;  // If not, go to "loop".
