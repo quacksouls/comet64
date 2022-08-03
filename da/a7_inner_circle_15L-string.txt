@@ -2,6 +2,7 @@
 > outputting true or false.  Second grid shows the solution.
 // The pattern oooo repeats two times at the top and at the
 // bottom.  In between, the pattern oxxo repeats 4 times.
+// This solution uses a string to encode the middle pattern.
 outer:                    // Loop to print the pattern
     output = false;       // oooo.
     int++;                //
