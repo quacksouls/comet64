@@ -1,6 +1,6 @@
 > Task: Make both grid patterns identical.  First grid can be written by
 > outputting true or false.  Second grid shows the solution.
-// Let x be a shaded square and o an unshaded square.  We
+// Similar to the previous solution.  However, note that we
 // have the pattern xo repeated 16 times.  This solution is
 // optimal, according to the game.
 output = true;   // Shade.
