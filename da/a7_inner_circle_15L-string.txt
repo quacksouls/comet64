@@ -1,0 +1,19 @@
+> Task: Make both grid patterns identical.  First grid can be written by
+> outputting true or false.  Second grid shows the solution.
+// The pattern oooo repeats two times at the top and at the
+// bottom.  In between, the pattern oxxo repeats 4 times.
+outer:                    // Loop to print the pattern
+    output = false;       // oooo.
+    int++;                //
+    check int < 8;        //
+    jump if true: outer;  //
+int = 0;                  // Reset the counter.
+str = oxxooxxooxxooxxo;   // Encoded pattern for middle.
+inner:                    // Loop to print the pattern
+    char = str[int];      // oxxo 4 times.
+    check char = x;       //
+    output = bool;        //
+    int++;                //
+    check int < 16;       //
+    jump if true: inner;  //
+int = 0;                  // Reset counter.
