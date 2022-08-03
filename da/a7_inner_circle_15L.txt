@@ -1,7 +1,7 @@
 > Task: Make both grid patterns identical.  First grid can be written by
 > outputting true or false.  Second grid shows the solution.
-// The pattern oooo repeats two times at the top and at the
-// bottom.  In between, the pattern oxxo repeats 4 times.
+// Similar to the previous solution.  However, we do not use
+// an encoded string to print the inner circle.
 outer:                    // Loop to print the pattern
     output = false;       // oooo.
     int++;                //
