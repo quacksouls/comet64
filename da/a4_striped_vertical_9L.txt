@@ -4,11 +4,11 @@
 // squares are unshaded.  We have the pattern of
 // shade-unshade repeated over and over.
 int = 1;                    // Start from odd numbered square.
-start:                      // The shade-unshade pattern.
+loop:                       // Start of "loop".
     check int = 0;          // Are we unshading?
     jump if true: unshade;  // If so, go to "unshade".
     output = true;          // Otherwise, we shade.
     int = 0;                // Switch to unshade.
-    jump to: start;         // Go to "start".
-unshade:                    // The unshade-shade pattern.
+    jump to: loop;          // Go to "loop".
+unshade:                    // The "unshade" branch.
     output = false;         // Unshade.

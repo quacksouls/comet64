@@ -1,9 +1,9 @@
 > Task: Make both grid patterns identical.  First grid can be written by
 > outputting true or false.  Second grid shows the solution.
 // Use a string to encode the pattern.  Test whether the
-// character str[i] is "I" and print the boolean result.
-str = IoIoIoIoIoIoIoIoIoIoIoIoIoIoIoIo;  // Encoded pattern.
-char = str[int];  // The character str[i].
-check char = I;   // Is str[i] = I?
+// character at index i is "x" and print the boolean result.
+str = xoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxo;  // Encoded pattern.
+char = str[int];  // Character at index i.
+check char = x;   // Is character = x?
 output = bool;    // Print boolean result.
 int++;            // Increment the index.
