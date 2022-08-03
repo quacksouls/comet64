@@ -7,7 +7,7 @@ output = true;  // Shade the top row.  This also shade
 output = true;  // the bottom row once the program
 output = true;  // loops back to the top.
 output = true;
-loop:                    // Loop to shade the rows in between.
+loop:                    // Start of "loop".
     int++;               // How many rows have we processed?
     output = true;       // Shade.
     output = false;      // Unshade.
