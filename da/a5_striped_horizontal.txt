@@ -3,17 +3,17 @@
 // Use a string to encode the solution.  Let x be a row of
 // shaded squares and o a row of unshaded squares.  We have
 // the pattern xo repeated 4 times.
-start:                    // The "start" branch.
-    str = xoxoxoxo;       // Encoded solution.
+str = xoxoxoxo;           // Encoded solution.
+loop:                     // Start of "loop".
     char = str[int];      // The 4 squares in a row.
     int++;                // Increment the index.
     check char = x;       // Is the row shaded?
-    jump if true: shade;  // If so, jump to "shade".
+    jump if true: shade;  // If so, go to "shade".
     output = false;       // Otherwise unshade 4 squares.
     output = false;       //
     output = false;       //
     output = false;       //
-    jump to: start;       // Go to "start".
+    jump to: loop;        // Go to "loop".
 shade:                    // The "shade" branch.
     output = true;        // Shade 4 squares.
     output = true;
