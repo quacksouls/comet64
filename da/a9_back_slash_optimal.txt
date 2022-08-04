@@ -1,0 +1,19 @@
+> Task: Make both grid patterns identical.  First grid can be written by
+> outputting true or false.  Second grid shows the solution.
+// The pattern for the first 16 squares can be created as
+// follows.  We have a single x.  This is then followed by
+// the pattern oooox repeated 3 times.  The remaining 16
+// squares follow the same pattern as described above.  We
+// assume the register "int" is initially zero.  This
+// solution is optimal, according to the game.
+output = true;           // The single x.
+loop:                    // Start of "loop".
+    int++;               // Increment the counter.
+    output = false;      // Print the pattern oooox
+    output = false;      // 3 times.
+    output = false;      //
+    output = false;      //
+    output = true;       //
+    check int < 3;       // Do we print oooox again?
+    jump if true: loop;  // If so, go to "loop".
+int = 0;                 // Reset counter.
