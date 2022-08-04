@@ -1,0 +1,22 @@
+> Task: Make both grid patterns identical.  First grid can be written by
+> outputting true or false.  Second grid shows the solution.
+// Directly print the pattern of the first 16 squares.
+// Let the game implicitly loop over the program to take
+// care of the remaining squares.  This solution is
+// optimal, according to the game.
+output = true;  // Print the pattern xxxx.
+output = true;
+output = true;
+output = true;
+output = false;  // Print the pattern oxxx.
+output = true;
+output = true;
+output = true;
+output = false;  // Print the pattern ooxx.
+output = false;
+output = true;
+output = true;
+output = false;  // Print the pattern ooox.
+output = false;
+output = false;
+output = true;
