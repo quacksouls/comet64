@@ -3,12 +3,13 @@
 // The first half of the pattern is the same as the second
 // half.  Use a loop to print the first half.  Each half has
 // 16 boolean values.  Encode each half as a string.  Test
-// whether character i is "x" and print the boolean result.
-// This solution is optimal, according to the game.
+// whether the character at index i is "x" and print the
+// boolean result.  This solution is optimal, according to
+// the game.
 str = xxxxoxxxooxxooox;   // Pattern of each half.
 loop:                     // Start of "loop".
     char = str[int];      // Character at index i.
-    check char = x;       // Is character = "x"?
+    check char = x;       // Is character = x?
     output = bool;        // Print boolean result.
     int++;                // Increment the index.
     check int = 16;       // Printed 16 boolean values yet?
