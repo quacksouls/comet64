@@ -2,7 +2,8 @@
 > Output only that.
 // Similar to the previous solution, but we remove a jump
 // instruction.  Only peek at the next input value after we
-// have updated the current maximum.
+// have updated the current maximum.  This solution is
+// optimal, according to the game.
 int = input;              // Current maximum.
 loop:                     // Start of "loop".
     reg = input;          // Read the next number.
