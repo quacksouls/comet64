@@ -1,0 +1,26 @@
+> Query: Reverse each string in input before outputting.
+> Example:
+> [input: asd, output: dsa]
+// Use the command "switch" to interchange the contents of the
+// register "str" and the switch box.  If the switch box has a
+// non-empty string and the register "str" also contains a
+// non-empty string, then the command "switch str" would move
+// the content of "str" to the switch box and the previous
+// content of the switch box would now be in "str".  Use the
+// switch box as a temporary string variable.  Traverse the
+// input string from the last character down to the first
+// character.  Use the switch box to build the string
+// backward.  This solution is optimal, according to the game.
+str = input;              // Read the input string.
+int = str.length - 1;     // Index of last character.
+loop:                     // Start of "loop".
+    char = str[int];      // Character at index i.
+    switch str;           // Interchange str and box.
+    str = str + char;     // Append character to new string.
+    switch str;           // Interchange str and box.
+    int--;                // Decrement the index i.
+    check int = -1;       // Is index = -1?
+    jump if false: loop;  // If not, go to "loop".
+switch str;               // Get the reversed string.
+switch null;              // Clear the switch box.
+output = str;             // Print the reversed string.
