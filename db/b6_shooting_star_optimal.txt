@@ -6,6 +6,6 @@
 //
 // Print this pattern over and over.  This solution is
 // optimal, according to the game.
-output = false;
-output = false;
-output = true;
+output = false;  // Print the pattern
+output = false;  // oox over and over.
+output = true;   //
