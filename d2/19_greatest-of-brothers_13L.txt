@@ -16,7 +16,7 @@ loop:                      // Start of loop.
     jump if true: newMax;  // If so, go to "newMax".
     jump to: loop;         // Otherwise, go to "loop".
 print:                     // The "print" branch.
-    output = int;          // Print the running maximu.
+    output = int;          // Print the running maximum.
 newMax:                    // The "newMax" branch.
     int = reg;             // The new maximum value.
     jump to: loop;         // Go to "loop".
