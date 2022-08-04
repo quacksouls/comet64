@@ -1,7 +1,7 @@
 > Task: Make both grid patterns identical.  First grid can be written by
 > outputting true or false.  Second grid shows the solution.
 // Print oox 3 times.  Then print oooox 3 times.  Let the
-// take care of the rest.
+// game take care of the rest.  Optimal solution.
 top:                       // Print the pattern
     output = false;        // oox 3 times.
     output = false;        //
