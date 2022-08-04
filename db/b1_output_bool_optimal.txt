@@ -1,6 +1,6 @@
 > Task: Make both grid patterns identical.  First grid can be written by
 > outputting true or false.  Second grid shows the solution.
-// Similar to the previous solution.  However we remove a
+// Similar to the previous solution.  However, we remove a
 // jump instruction.  After checking for whether the index is
 // greater than 13, we only need to print the content of the
 // register "bool".  Assume the register "int" is initially
