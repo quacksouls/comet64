@@ -2,14 +2,14 @@
 > outputting true or false.  Second grid shows the solution.
 // Grid cells are indexed from 1 onward.  Each cell with index
 // greater than 13 is shaded.  All other cells are unshaded.
-// Compare the cell index and shade accordingly.  Here we
-// assume that the register "int" is initialized to zero at
-// the start.
-int++;
-check int > 13;
-jump if true: True;
-output = false;
-jump to: end;
-True:
-    output = true;
-end:
+// Compare the cell index, jump accordingly, and shade as
+// required.  We assume the register "int" is initialized to
+// zero at the start.
+int++;                // Increment index.
+check int > 13;       // Is index > 13?
+jump if true: shade;  // If so, go to "shade".
+output = false;       // Unshade.
+jump to: end;         // Go to "end".
+shade:                // The "shade" branch.
+    output = true;    // Shade.
+end:                  // End of program.

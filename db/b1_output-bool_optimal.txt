@@ -1,10 +1,10 @@
 > Task: Make both grid patterns identical.  First grid can be written by
 > outputting true or false.  Second grid shows the solution.
-// Grid cells are indexed from 1 onward.  Each cell with index
-// greater than 13 is shaded.  All other cells are unshaded.
-// Compare the cell index and shade accordingly.  We assume
-// that the register "int" is initialized to zero at the start. 
-// This solution is optimal, according to the game.
-int++;
-check int > 13;
-output = bool;
+// Similar to the previous solution.  However we remove a
+// jump instruction.  After checking for whether the index is
+// greater than 13, we only need to print the content of the
+// register "bool".  Assume the register "int" is initially
+// zero.  This solution is optimal, according to the game.
+int++;           // Increment index.
+check int > 13;  // Is index > 13?
+output = bool;   // Print boolean result.
