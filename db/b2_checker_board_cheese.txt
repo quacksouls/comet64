@@ -6,12 +6,10 @@
 // o := false
 //
 // The register "int" is used as an index i to each string
-// character.  Check whether str[i] is "x" and print the
-// boolean result.  This solution has the least number of
-// lines of code, but the number of steps is not optimal,
-// according to the game.
-str = xoxooxoxxoxooxoxxoxooxoxxoxooxox;
-char = str[int];
-check char = x;
-output = bool;
-int++;
+// character.  Check whether character at index i is "x" and
+// print the boolean result.
+str = xoxooxoxxoxooxoxxoxooxoxxoxooxox;  // Encoded pattern.
+char = str[int];  // Character at index i.
+check char = x;   // Is character = x?
+output = bool;    // Print boolean result.
+int++;            // Increment index.

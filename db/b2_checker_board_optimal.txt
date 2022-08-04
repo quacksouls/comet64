@@ -8,11 +8,11 @@
 // This pattern is repeated 4 times.  We need to print the
 // above pattern 4 times.  This solution is optimal,
 // according to the game.
-output = true;
-output = false;
-output = true;
-output = false;
-output = false;
-output = true;
-output = false;
-output = true;
+output = true;   // The pattern xoxo.
+output = false;  //
+output = true;   //
+output = false;  //
+output = false;  // The pattern oxox.
+output = true;   //
+output = false;  //
+output = true;   //
