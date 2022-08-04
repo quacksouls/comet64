@@ -7,8 +7,8 @@
 // the character str[int] is "x" or "o".  The result
 // should be in the register "bool".  This solution is
 // optimal, according to the game.
-str = xoxooxoooxooooxoooooxooooooxoooo;  // The pattern.
-char = str[int];  // The character str[i].
+str = xoxooxoooxooooxoooooxooooooxoooo;  // Encoded pattern.
+char = str[int];  // Character at index i.
 check char = x;   // Is character = "x"?
-output = bool;    // Print result of test.
+output = bool;    // Print boolean result.
 int++;            // Increment the index i.

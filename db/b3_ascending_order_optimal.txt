@@ -3,11 +3,11 @@
 // Note that we can print "x" first.  Next comes as many "o"
 // as we need to print.  This solution is optimal,
 // according to the game.
-output = true;
-reg++;
-int = 0;
-loop:
-    output = false;
-    int++;
-    check int < reg;
-    jump if true: loop;
+output = true;           // Shade a square.
+reg++;                   // Increment max. unshaded squares.
+int = 0;                 // Reset counter.
+loop:                    // Start of "loop".
+    output = false;      // Unshade a square.
+    int++;               // Increment counter.
+    check int < reg;     // Unshade another square?
+    jump if true: loop;  // If so, go to "loop".

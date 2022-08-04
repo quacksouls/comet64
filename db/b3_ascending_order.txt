@@ -1,7 +1,6 @@
 > Task: Make both grid patterns identical.  First grid can be written by
 > outputting true or false.  Second grid shows the solution.
 // We want to print this pattern:
-//
 // xo
 // xoo
 // xooo
@@ -9,17 +8,15 @@
 // xooooo
 // xoooooo
 // xooooooo
-//
-// Use the register "reg" to keep track of the number of "o" to print.
-// The register "int" can be used to keep track of the number of "o"
-// we have printed so far.
-loop:
-    check int < reg;
-    jump if false: end;
-    output = false;
-    int++;
-    jump to: loop;
-end:
-    output = true;
-    reg++;
-    int = 0;
+// int := How many squares have we unshaded so far?
+// reg := Maximum number of unshaded squares.
+loop:                    // Start of "loop".
+    check int < reg;     // Unshade another square?
+    jump if false: end;  // If no, go to "end".
+    output = false;      // Otherwise, unshade a square.
+    int++;               // Increment counter.
+    jump to: loop;       // Go to "loop".
+end:                     // The "end" branch.
+    output = true;       // Shade a square.
+    reg++;               // Increment max. unshaded squares.
+    int = 0;             // Reset counter.
