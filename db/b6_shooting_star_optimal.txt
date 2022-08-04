@@ -4,8 +4,9 @@
 //
 // oox
 //
-// Print this pattern over and over.  This solution is
-// optimal, according to the game.
+// Print this pattern over and over.  Let the game implicitly
+// loop over the program to take care of the rest.  This
+// solution is optimal, according to the game.
 output = false;  // Print the pattern
 output = false;  // oox over and over.
 output = true;   //
