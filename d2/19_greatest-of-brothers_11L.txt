@@ -2,14 +2,14 @@
 > Output only that.
 // Similar to the previous solution, but we remove a jump
 // instruction.
-int = input;              // Read first number.
+int = input;              // The running maximum.
 loop:                     // Start of "loop".
-    check input = null;   // More numbers?
-    jump if true: print;  // If no more, print maximum.
+    check input = null;   // No more numbers?
+    jump if true: print;  // If so, go to "print".
     reg = input;          // Read the next number.
     check int < reg;      // Is current max < input?
     jump if false: loop;  // If not, go to "loop".
     int = reg;            // The new maximum value.
     jump to: loop;        // Go to "loop".
 print:                    // The "print" branch.
-    output = int;         // Print the maximum number.
+    output = int;         // Print the running maximum.

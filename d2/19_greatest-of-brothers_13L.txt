@@ -1,5 +1,5 @@
 > Query: Read all values from input and find the greatest of them all.
-> Output only that.
+> Output only that
 // Determine the maximum of a bunch of numbers.  Read in the
 // first value because all the integers might be negative.
 // Cannot assume that all numbers are positive, hence cannot
@@ -7,16 +7,16 @@
 // running maximum to the current input.  If the running
 // maximum is less than the current input, then we have found
 // a new running maximum.  Otherwise read the next input.
-int = input;               // Read first number.
-loop:                      // The "loop" branch.
-    check input = null;    // More numbers?
-    jump if true: print;   // If no more, print maximum.
-    reg = input;           // Read the next input.
+int = input;               // The current maximum.
+loop:                      // Start of loop.
+    check input = null;    // No more numbers?
+    jump if true: print;   // If so, go to "print".
+    reg = input;           // Read the next number
     check int < reg;       // Is current max < input?
     jump if true: newMax;  // If so, go to "newMax".
     jump to: loop;         // Otherwise, go to "loop".
 print:                     // The "print" branch.
-    output = int;          // Print the maximum number.
+    output = int;          // Print the running maximu.
 newMax:                    // The "newMax" branch.
     int = reg;             // The new maximum value.
     jump to: loop;         // Go to "loop".
