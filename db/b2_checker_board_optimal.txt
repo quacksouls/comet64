@@ -1,17 +1,18 @@
 > Task: Make both grid patterns identical.  First grid can be written by
 > outputting true or false.  Second grid shows the solution.
-// Use a string of "x" and "o" to encode the pattern.
+// Consider the pattern
 //
-// x := true
-// o := false
+// x o x o
+// o x o x
 //
-// The register "int" is used as an index i to each string
-// character.  Check whether str[i] is "x" and print the
-// boolean result.  This solution has the least number of
-// lines of code, but the number of steps is not optimal,
+// This pattern is repeated 4 times.  We need to print the
+// above pattern 4 times.  This solution is optimal,
 // according to the game.
-str = xoxooxoxxoxooxoxxoxooxoxxoxooxox;
-char = str[int];
-check char = x;
-output = bool;
-int++;
+output = true;
+output = false;
+output = true;
+output = false;
+output = false;
+output = true;
+output = false;
+output = true;
