@@ -1,0 +1,22 @@
+> Task: Make both grid patterns identical.  First grid can be written by
+> outputting true or false.  Second grid shows the solution.
+// Print oox 3 times.  Then print oooox 3 times.  Let the
+// take care of the rest.
+top:                       // Print the pattern
+    output = false;        // oox 3 times.
+    output = false;        //
+    output = true;         //
+    int++;                 //
+    check int < 3;         //
+    jump if true: top;     //
+int = 0;                   // Reset counter.
+bottom:                    // Print the pattern
+    output = false;        // oooox 3 times.
+    output = false;        //
+    output = false;        //
+    output = false;        //
+    output = true;         //
+    int++;                 //
+    check int < 3;         //
+    jump if true: bottom;  //
+int = 0;                   // Reset counter.
