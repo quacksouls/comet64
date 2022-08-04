@@ -4,11 +4,12 @@
 //
 // oxxoooo
 //
-// Print this pattern over and over.
-output = false;
-output = true;
-output = true;
-output = false;
-output = false;
-output = false;
-output = false;
+// Print this pattern over and over.  This solution is
+// optimal, according to the game.
+output = false;  // Print the pattern oxxoooo
+output = true;   // over and over.
+output = true;   //
+output = false;  //
+output = false;  //
+output = false;  //
+output = false;  //

@@ -1,11 +1,9 @@
 > Task: Make both grid patterns identical.  First grid can be written by
 > outputting true or false.  Second grid shows the solution.
 // Use a string to encode the pattern.  Test whether character
-// i is "x" and print the boolean result.  This solution has
-// the smallest number of lines.  The number of steps is not
-// optimal, according to the game.
-str = oxxoooooxxoooooxxoooooxxoooooxxo;
-char = str[int];
-check char = x;
-output = bool;
-int++;
+// at index i is "x" and print the boolean result.
+str = oxxoooooxxoooooxxoooooxxoooooxxo;  // Encoded pattern.
+char = str[int];  // Character at index i.
+check char = x;   // Is character = x?
+output = bool;    // Print boolean result.
+int++;            // Increment index.

@@ -5,12 +5,12 @@
 // oxxoooo
 //
 // Print "oxx", then use a loop to print "oooo".
-output = false;
-output = true;
-output = true;
+output = false;          // Print the pattern oxx.
+output = true;           //
+output = true;           //
 loop:                    // Start of "loop".
-    output = false;      // Print "o".
-    int++;               // How many "o" have been printed.
-    check int < 4;       // Have we printed < 4 "o"?
-    jump if true: loop;  // If true, go to start of "loop".
-int = 0;                 // Otherwise, reset number of "o".
+    output = false;      // Unshade a square.
+    int++;               // How many squares have we unshaded.
+    check int < 4;       // Have we unshaded < 4 squares?
+    jump if true: loop;  // If so, go to start of "loop".
+int = 0;                 // Otherwise, reset counter.
