@@ -1,0 +1,55 @@
+> Query: Input contains integers between 1 and 20, inclusive.  Output them
+> as Roman numerals.
+> Example:
+> [input: 2, output: II]
+> [input: 4, output: IV]
+> [input: 14, output: XIV]
+// Let n be an integer such that 1 <= n <= 20.  Let S be a
+// string representation of the Roman numeral equivalent of
+// n.  Initially, S is the empty string.  We have these
+// cases to consider, in the order given:
+//
+// (1) If n >= 10, then the Roman numeral has an X.  Append X
+//     to S and set n := n - 10.
+// (2) If n = 9, then the Roman numeral has IX.  Append IX to
+//     S and set n := n - 9.
+// (3) If n >= 5, then the Roman numeral has a V.  Append V to
+//     S and set n := n - 5.
+// (4) If n = 4, then the Roman numeral has IV.  Append IV to
+//     S and set n := n - 4.
+// (5) If n > 0, then the Roman numeral has an I.  Append I to
+//     S and set n := n - 1.
+// (6) If n = 0, then we have finished our conversion from
+//     decimal to Roman numeral.  Print the string S.
+int = input;              // Read the decimal number n.
+str = ;                   // S := empty string
+loop:                     // Start of "loop".
+    check int > 9;        // Is n >= 10?
+    jump if true: ten;    // If so, go to "ten".
+    check int = 9;        // Is n = 9?
+    jump if true: nine;   // If so, go to "nine".
+    check int > 4;        // Is n >= 5?
+    jump if true: five;   // If so, go to "five".
+    check int = 4;        // Is n = 4?
+    jump if true: four;   // If so, go to "four".
+    check int = 0;        // Is n = 0?
+    jump if true: print;  // If so, go to "print".
+    str = str + I;        // Append I to S.
+    int--;                // n := n - 1
+    jump to: loop;        // Go to "loop".
+ten:                      // The "ten" branch.
+    str = str + X;        // Append X to S.
+    int = int - 10;       // n := n - 10
+    jump to: loop;        // Go to "loop".
+nine:                     // The "nine" branch.
+    str = str + IX;       // Append IX to S.
+    int = int - 9;        // n := n - 9
+    jump to: loop;        // Go to "loop".
+five:                     // The "five" branch.
+    str = str + V;        // Append V to S.
+    int = int - 5;        // n := n - 5
+    jump to: loop;        // Go to "loop".
+four:                     // The "four" branch.
+    str = str + IV;       // Append IV to S.
+print:                    // The "print" branch.
+    output = str;         // Print the Roman numeral.
