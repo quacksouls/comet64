@@ -32,8 +32,7 @@ ten:                      // The "ten" branch.
     jump to: loop;        // Go to "loop".
 nine:                     // The "nine" branch.
     str = str + IX;       // Append IX to S.
-    int = int - 9;        // n := n - 9
-    jump to: loop;        // Go to "loop".
+    jump to: print;       // Go to "print".
 five:                     // The "five" branch.
     str = str + V;        // Append V to S.
     int = int - 5;        // n := n - 5
