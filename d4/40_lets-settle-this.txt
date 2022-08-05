@@ -1,17 +1,20 @@
 > Query: Input contains rock, paper, or scissors.  Read a value from input,
 > compare it to the next input and output the winner of the
 > rock-paper-scissors game.  If there is no winner, output "draw".
-// Read two values from input.  Each value is a strategy, i.e.
-// either "rock", "paper", or "scissors".  Compare the two
-// strategies and determine the winner.  Output "draw" in case
-// of no winner. Use the following abbreviations and integer
-// values:
+// Read two strings from input.  Each string is a strategy,
+// i.e. either "rock", "paper", or "scissors".  Compare the
+// two strategies and determine the winner.  Output "draw" in
+// case of no winner. Use the following abbreviations and
+// integer values:
 //
 // p := paper, 16
 // r := rock, 18
 // s := scissors, 19
 //
-// The winners are:
+// The integer value corresponding to each strategy is the
+// integer equivalent of the first character in the strategy's
+// name.  The game represents "a" as 1, "b" as 2, "c" as 3,
+// and so on.  The winners are:
 //
 // paper := (p - r)^2 = 4
 // rock := (r - s)^2 = 1
