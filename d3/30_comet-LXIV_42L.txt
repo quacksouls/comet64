@@ -14,71 +14,45 @@
 //
 // We isolate the quotient q and remainder r.  Convert to
 // Roman numeral on a case-by-case basis.
-str = ;                // Clear the string register.
-reg = input;           // Read the integer.
-int = reg / 10;        // The quotient.
-int = int * 10;        // The quotient as tens.
-int = reg - int;       // The remainder.
-switch int;            // Store the remainder.
-int = reg / 10;        // The quotient.
-reg = int;             // Quotient q.
-switch int;            // Remainder r.
-check reg = 2;         // Is q = 2?
-jump if true: twenty;  // If so, go to "twenty".
-check reg = 1;         // Is q = 1?
-jump if true: ten;     // If so, go to "ten".
-jump to: units;        // Otherwise integer < 10.
-twenty:                // The "twenty" branch.
-    str = XX;
-    jump to: units;
-ten:                   // The "ten" branch.
-    str = X;
-    jump to: units;
-units:                 // The "units" branch.
-    check int = 9;
-    jump if true: nine;
-    check int = 8;
-    jump if true: eight;
-    check int = 7;
-    jump if true: seven;
-    check int = 6;
-    jump if true: six;
-    check int = 5;
-    jump if true: five;
-    check int = 4;
-    jump if true: four;
-    check int = 3;
-    jump if true: three;
-    check int = 2;
-    jump if true: two;
-    check int = 1;
-    jump if true: one;
-    jump to: end;
-nine:
-    str = str + IX;
-    jump to: end;
-eight:
-    str = str + VIII;
-    jump to: end;
-seven:
-    str = str + VII;
-    jump to: end;
-six:
-    str = str + VI;
-    jump to: end;
-five:
-    str = str + V;
-    jump to: end;
-four:
-    str = str + IV;
-    jump to: end;
-three:
-    str = str + III;
-    jump to: end;
-two:
-    str = str + II;
-    jump to: end;
-one:
-    str = str + I;
-end:
-    output = str;
+str = ;                   // S := empty string
+reg = input;              // Read the integer n.
+int = reg / 10;           // The quotient.
+int = int * 10;           // The quotient as tens.
+int = reg - int;          // The remainder.
+switch int;               // Store the remainder.
+int = reg / 10;           // The quotient.
+reg = int;                // Quotient q.
+switch int;               // Remainder r.
+check reg = 2;            // Is q = 2?
+jump if true: twenty;     // If so, go to "twenty".
+check reg = 1;            // Is q = 1?
+jump if true: ten;        // If so, go to "ten".
+jump to: units;           // Otherwise, go to "units".
+twenty:                   // The "twenty" branch.
+    str = XX;             // Append XX to S.
+    jump to: units;       // Go to "units".
+ten:                      // The "ten" branch.
+    str = X;              // Append X to S.
+units:                    // The "units" branch.
+    check int = 9;        // Is n = 9?
+    jump if true: nine;   // If so, go to "nine".
+    check int > 4;        // Is n >= 5?
+    jump if true: five;   // If so, go to "five".
+    check int = 4;        // Is n = 4?
+    jump if true: four;   // If so, go to "four".
+    check int = 0;        // Is n = 0?
+    jump if true: print;  // If so, go to "print".
+    str = str + I;        // Append I to S.
+    int--;                // n := n - 1
+    jump to: units;       // Go to "units".
+nine:                     // The "nine" branch.
+    str = str + IX;       // Append IX to S.
+    jump to: print;       // Go to "print".
+five:                     // The "five" branch.
+    str = str + V;        // Append V to S.
+    int = int - 5;        // n := n - 5
+    jump to: units;       // Go to "units".
+four:                     // The "four" branch.
+    str = str + IV;       // Append IV to S.
+print:                    // The "print" branch.
+    output = str;         // Print the Roman numeral.
