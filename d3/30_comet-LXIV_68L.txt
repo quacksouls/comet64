@@ -80,6 +80,5 @@ two:
     jump to: end;
 one:
     str = str + I;
-    jump to: end;
 end:
     output = str;
