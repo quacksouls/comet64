@@ -1,0 +1,44 @@
+> Query: Input contains integers between 1 and 20, inclusive.  Output them
+> as Roman numerals.
+> Example:
+> [input: 2, output: II]
+> [input: 4, output: IV]
+> [input: 14, output: XIV]
+// Similar to the previous solution.  However, we create a
+// label called "units" to handle the case where n < 4.  As
+// long as 0 < n <= 3, we append I to the string S.  If
+// n = 0, then we print the Roman numeral.  This solution
+// is optimal, according to the game.
+int = input;              // Read the decimal number n.
+str = ;                   // S := empty string
+loop:                     // Start of "loop".
+    check int > 9;        // Is n >= 10?
+    jump if true: ten;    // If so, go to "ten".
+    check int = 9;        // Is n = 9?
+    jump if true: nine;   // If so, go to "nine".
+    check int > 4;        // Is n >= 5?
+    jump if true: five;   // If so, go to "five".
+    check int = 4;        // Is n = 4?
+    jump if true: four;   // If so, go to "four".
+units:                    // The "units" branch.
+    check int = 0;        // Is n = 0?
+    jump if true: print;  // If so, go to "print".
+    str = str + I;        // Append I to S.
+    int--;                // n := n - 1
+    jump to: units;       // Go to "units".
+ten:                      // The "ten" branch.
+    str = str + X;        // Append X to S.
+    int = int - 10;       // n := n - 10
+    jump to: loop;        // Go to "loop".
+nine:                     // The "nine" branch.
+    str = str + IX;       // Append IX to S.
+    int = int - 9;        // n := n - 9
+    jump to: loop;        // Go to "loop".
+five:                     // The "five" branch.
+    str = str + V;        // Append V to S.
+    int = int - 5;        // n := n - 5
+    jump to: loop;        // Go to "loop".
+four:                     // The "four" branch.
+    str = str + IV;       // Append IV to S.
+print:                    // The "print" branch.
+    output = str;         // Print the Roman numeral.
