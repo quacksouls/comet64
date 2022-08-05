@@ -17,7 +17,8 @@
 // scissors := 16 + 19 = 35
 // draw := both strategies are the same
 //
-// This solution is optimal, according to the game.
+// We also first check to see whether both strategies are the
+// same.  This solution is optimal, according to the game.
 loop:                        // Start of "loop".
     str = input;             // Read first strategy.
     char = str[0];           // Abbreviation of strategy.
@@ -25,14 +26,14 @@ loop:                        // Start of "loop".
     str = input;             // Read second strategy.
     char = str[0];           // Abbreviation of strategy.
     int = char;              // Integer value of strategy.
+    check int = reg;         // Both strategies the same?
+    jump if true: draw;      // If so, go to "draw".
     int = reg + int;         // Addition of strategy codes.
     check int = 34;          // Is paper the winner?
     jump if true: paper;     // If so, go to "paper".
     check int = 37;          // Is rock the winner?
     jump if true: rock;      // If so, go to "rock".
-    check int = 35;          // Is scissors the winner?
-    jump if true: scissors;  // If so, go to "scissors".
-    output = draw;           // A draw.
+    output = scissors;       // Scissors is the winner.
     jump to: loop;           // Go to "loop".
 paper:                       // The "paper" branch.
     output = paper;          // Paper wins.
@@ -40,5 +41,5 @@ paper:                       // The "paper" branch.
 rock:                        // The "rock" branch.
     output = rock;           // Rock wins.
     jump to: loop;           // Go to "loop".
-scissors:                    // The "scissors" branch.
-    output = scissors;       // Scissors wins.
+draw:                        // The "draw" branch.
+    output = draw;           // A draw.
