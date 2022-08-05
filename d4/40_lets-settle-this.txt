@@ -17,28 +17,28 @@
 // rock := (r - s)^2 = 1
 // scissors := (s - p)^2 = 9
 // draw := (p - p)^2 = (r - r)^2 = (s - s)^2 = 0
-loop:                           // Start of "loop".
-    str = input;                // Read one strategy.
-    char = str[0];              // Abbreviation of strategy.
-    reg = char;                 // Integer value of strategy.
-    str = input;                // Read another strategy.
-    char = str[0];              // Abbreviation of strategy.
-    int = char;                 // Integer value of strategy.
-    reg = reg - int;            // Difference between integers.
-    reg = reg * reg;            // Squared of difference.
-    check reg = 4;              // Is paper the winner?
-    jump if true: paperWin;     // If so, go to "paperWin".
-    check reg = 1;              // Is rock the winner?
-    jump if true: rockWin;      // If so, go to "rockWin".
-    check reg = 9;              // Is scissors the winner?
-    jump if true: scissorsWin;  // If so, go to "scissorsWin".
-    output = draw;              // It's a draw.
-    jump to: loop;              // Go to start of "loop".
-paperWin:                       // The "paperWin" branch.
-    output = paper;             // Paper wins.
-    jump to: loop;              // Go to start of "loop".
-rockWin:                        // The "rockWin" branch.
-    output = rock;              // Rock wins.
-    jump to: loop;              // Go to start of "loop".
-scissorsWin:                    // The "scissorsWin" branch.
-    output = scissors;          // Scissors wins.
+loop:                        // Start of "loop".
+    str = input;             // Read first strategy.
+    char = str[0];           // Abbreviation of strategy.
+    reg = char;              // Integer value of strategy.
+    str = input;             // Read second strategy.
+    char = str[0];           // Abbreviation of strategy.
+    int = char;              // Integer value of strategy.
+    int = reg - int;         // Difference between integers.
+    int = int * int;         // Squared of difference.
+    check int = 4;           // Is paper the winner?
+    jump if true: paper;     // If so, go to "paper".
+    check int = 1;           // Is rock the winner?
+    jump if true: rock;      // If so, go to "rock".
+    check int = 9;           // Is scissors the winner?
+    jump if true: scissors;  // If so, go to "scissors".
+    output = draw;           // A draw.
+    jump to: loop;           // Go to "loop".
+paper:                       // The "paper" branch.
+    output = paper;          // Paper wins.
+    jump to: loop;           // Go to "loop".
+rock:                        // The "rock" branch.
+    output = rock;           // Rock wins.
+    jump to: loop;           // Go to "loop".
+scissors:                    // The "scissors" branch.
+    output = scissors;       // Scissors wins.
