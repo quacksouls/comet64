@@ -36,7 +36,7 @@ nine:                     // The "nine" branch.
 five:                     // The "five" branch.
     str = str + V;        // Append V to S.
     int = int - 5;        // n := n - 5
-    jump to: loop;        // Go to "loop".
+    jump to: units;       // Go to "units".
 four:                     // The "four" branch.
     str = str + IV;       // Append IV to S.
 print:                    // The "print" branch.
