@@ -1,0 +1,21 @@
+> Query: Input contains 11 random one-digit numbers.  Each number appears
+> only once except one.  Find the duplicate.
+// All the one-digit integers are:
+//
+// 0, 1, 2, 3, ..., 8, 9
+//
+// The sum of these digits is
+//
+// 0 + 1 + 2 + 3 + ... + 8 + 9 = 45
+//
+// Let x be a repeating digit.  The sum of the 11 random
+// one-digit numbers is S := 45 + x.  The value of the
+// repeating digit is therefore x := S - 45.
+loop:                     // Start of "loop".
+    check input = null;   // Any more digits to read?
+    jump if true: print;  // If not, go to "print".
+    int = int + input;    // Update cumulative sum.
+    jump to: loop;        // Go to "loop".
+print:                    // The "print" branch.
+    int = int - 45;       // The duplicate digit.
+    output = int;         // Print the duplicate digit.

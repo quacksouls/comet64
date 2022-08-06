@@ -1,0 +1,15 @@
+> Query: Input contains 11 random one-digit numbers.  Each number appears
+> only once except one.  Find the duplicate.
+// Similar to the previous solution.  However, after we have
+// updated the cumulative sum, we check whether there are any
+// more integers to read.  This allows us to remove a jump
+// instruction and a label.  The register "int" initially
+// holds zero.  There is no need to explicitly set "int" to
+// zero at the start of the program.  This solution is
+// optimal, according to the game.
+loop:                     // Start of "loop".
+    int = int + input;    // Update cumulative sum.
+    check input = null;   // Any more digits to read?
+    jump if false: loop;  // If so, go to "loop".
+int = int - 45;           // The duplicate digit.
+output = int;             // Print the duplicate digit.
