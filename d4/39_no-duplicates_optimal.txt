@@ -1,23 +1,14 @@
 > Query: Input contains 5 random one-digit numbers.  Each number appears
 > only once except one.  Find the duplicate.
-// Reuse the solution to "38. No Duplicates!"
-// Use an array of 10 elements.  The only array we have access
-// to is a string of characters.  Interpret a string as an
-// array of characters.  Let i be an input one-digit integer.
-// If the character str[i] is lower-case O (i.e. "o"), this is
-// the first time we see i.  Set str[i] to "a", meaning we
-// have seen the digit i.  However, in case str[i] is "a",
-// then we have seen i already and this is the second time we
-// are seeing i.  Therefore i is a duplicate.  This solution
-// is optimal, according to the game.
-str = oooooooooo;         // Array of 11 elements.
+// Reuse the array solution to Problem "38. No Duplicates!"
+str = oooooooooo;         // Array of 10 elements.
 loop:                     // Start of "loop".
     int = input;          // Read a one-digit integer i.
-    char = str[int];      // Peek at element str[i].
-    check char = a;       // Is str[i] = "a"?
+    char = str[int];      // Character at index i of string.
+    check char = x;       // Is character = x?
     jump if true: print;  // If so, go to "print".
-    char = a;             // Otherwise, have not seen i yet.
-    str[int] = char;      // Set str[i] = "a".
-    jump to: loop;        // Go to start of "loop".
+    char = x;             // Otherwise, have not seen i yet.
+    str[int] = char;      // Set character to x.
+    jump to: loop;        // Go to "loop".
 print:                    // The "print" branch.
-    output = int;         // Print the duplicate.
+    output = int;         // Print the duplicate integer.
