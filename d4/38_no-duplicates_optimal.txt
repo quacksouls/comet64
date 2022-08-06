@@ -11,5 +11,5 @@ loop:                     // Start of "loop".
     int = int + input;    // Update cumulative sum.
     check input = null;   // Any more digits to read?
     jump if false: loop;  // If so, go to "loop".
-int = int - 45;           // The duplicate digit.
+int = int - 45;           // Otherwise, get duplicate digit.
 output = int;             // Print the duplicate digit.
