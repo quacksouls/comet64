@@ -1,0 +1,45 @@
+> Query: Sort each string in input alphabetically before outputting.
+> Example: [input: asd, output: ads]
+// Similar to the previous solution.  However, instead of
+// going from the first character up to the last character of
+// the string S, we traverse S from the last character down to
+// the first character.  This should allow us to remove a few
+// lines.  Let i be the index of a character in S.  Initially
+// we have i := n - 1, where n is the number of characters in
+// S.  The character at index i is the right character,
+// whereas the character at index i - 1 is the left character.
+// If S is not sorted in lexicographic order, then we can find
+// the greatest index i such that the characters at indices i
+// and i - 1 can be interchanged.  Swap the two adjacent
+// characters, set i to the greatest index of S, and repeat
+// the process.  Otherwise, S is sorted in lexicographic
+// order and eventually the index i is 0.  We take the value
+// i := 0 as the signal to print the sorted string S.  This
+// solution is optimal, according to the game.
+str = input;               // Read a string S.
+int = str.length - 1;      // Index i of last character.
+loop:                      // Start of "loop".
+    char = str[int];       // Right character.
+    reg = int - 1;         // Index i - 1 of left character.
+    switch int;            // Store index i in memory.
+    int = char;            // Right character as integer.
+    char = str[reg];       // Left character.
+    reg = char;            // Left character as integer.
+    check reg > int;       // Is left char > right char?
+    jump if true: swap;    // If so, go to "swap".
+    switch int;            // Retrieve index i.
+    int--;                 // Decrement index i.
+    check int < 1;         // Is index i < 1?
+    jump if false: loop;   // If so, go to "print".
+    jump to: print;        // Go to "loop".
+swap:                      // The "swap" branch.
+    switch int;            // Get index i; store right char.
+    str[int] = char;       // Left char at right index.
+    reg = int - 1;         // Index of left character.
+    switch int;            // Get right char; store index i.
+    char = int;            // Right char as character.
+    str[reg] = char;       // Right char at left index.
+    int = str.length - 1;  // Set i to last index in S.
+    jump to: loop;         // Go to "loop".
+print:                     // The "print" branch.
+    output = str;          // Print the sorted string.

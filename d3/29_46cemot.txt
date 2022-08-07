@@ -1,0 +1,53 @@
+> Query: Sort each string in input alphabetically before outputting.
+> Example: [input: asd, output: ads]
+// We use a variation of bubble sort
+//
+// https://en.wikipedia.org/wiki/Bubble_sort
+//
+// Compare two adjacent characters in a string S.  If the
+// characters are not in lexicographic order, then swap
+// the characters.  Otherwise, move to the next pair of
+// characters.  Let i be the index of the left character in S.
+// Initially i := 0.  The index of the right character is
+// i + 1.  Let j be the integer representation of the
+// character at index i and k the integer representation of
+// the character at index i + 1.  If j <= k, then set 
+// i := i + 1 and go on comparing.  Otherwise j > k so we
+// interchange the two characters at indices i and i + 1,
+// set i := 0, and compare characters starting from the
+// beginning of S.  Note that if two adjacent characters in S
+// are not in lexicographic order, we can find a smallest
+// index i such that the characters at indices i and i + 1 can
+// be swapped with each other.  However, if the characters in
+// S are in lexicographic order, then eventually the value of
+// i is the same as the maximum index of S.  At this point, i
+// is the last index of S, the index i + 1 is out of bound,
+// hence S is sorted in lexicographic order.
+str = input;               // Read a string S.
+int = 0;                   // Index i of left character.
+loop:                      // Start of "loop".
+    reg = str.length - 1;  // Index of last character.
+    check int < reg;       // Is i < max index?
+    jump if false: print;  // If not, go to "print".
+    char = str[int];       // Left character.
+    reg = int + 1;         // Index i + 1 of right character.
+    switch int;            // Store index i in memory.
+    int = char;            // Left character as integer.
+    char = str[reg];       // Right character.
+    reg = char;            // Right character as integer.
+    check int > reg;       // Is left char > right char?
+    jump if true: swap;    // If so, go to "swap".
+    switch int;            // Retrieve index i.
+    int++;                 // Increment index i.
+    jump to: loop;         // Go to "loop".
+swap:                      // The "swap" branch.
+    switch int;            // Get index i; store left char.
+    str[int] = char;       // Right char at left index.
+    reg = int + 1;         // Index of right char.
+    switch int;            // Get left char; store index i.
+    char = int;            // Left char as character.
+    str[reg] = char;       // Left char at right index.
+    int = 0;               // Set i := 0.
+    jump to: loop;         // Go to "loop".
+print:                     // The "print" branch.
+    output = str;          // Print the sorted string.
