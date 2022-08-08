@@ -1,0 +1,60 @@
+> Query: Input contains integers between 0 and 15, inclusive.  Output them
+> after converting to binary.
+> Example:
+> [input: 0, output: 0000]
+> [input: 13, output: 1101]
+// Consider the following integer to binary conversion table:
+//
+// 0: 0000     8: 1000
+// 1: 0001     9: 1001
+// 2: 0010    10: 1010
+// 3: 0011    11: 1011
+// 4: 0100    12: 1100
+// 5: 0101    13: 1101
+// 6: 0110    14: 1110
+// 7: 0111    15: 1111
+//
+// Let n be the input integer and let S be a string of
+// binary digits.  If n >= 8, then the first digit of S is 1
+// and we set n := n - 8.  Otherwise the first digit of S is
+// 0.  If n >= 4, the second digit of S is 1 and set
+// n := n - 4.  Otherwise the second digit of S is 0.  If
+// n >= 2, the third digit of S is 1 and set n := n - 2.
+// Otherwise, the third digit of S is 0.  If n = 1, the fourth
+// digit of S is 1 and print the string S.  Otherwise, the
+// fourth digit of S is 0 and print S.  This solution is
+// optimal, according to the game.
+int = input;
+str = ;
+check int > 7;
+jump if false: zero8;
+str = str + 1;
+int = int - 8;
+jump to: four;
+zero8:
+    str = str + 0;
+four:
+    check int > 3;
+    jump if false: zero4;
+    str = str + 1;
+    int = int - 4;
+    jump to: two;
+zero4:
+    str = str + 0;
+two:
+    check int > 1;
+    jump if false: zero2;
+    str = str + 1;
+    int = int - 2;
+    jump to: one;
+zero2:
+    str = str + 0;
+one:
+    check int = 1;
+    jump if false: zero;
+    str = str + 1;
+    jump to: print;
+zero:
+    str = str + 0;
+print:
+    output = str;

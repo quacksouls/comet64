@@ -1,0 +1,86 @@
+> Query: Input contains integers between 0 and 15, inclusive.  Output them
+> after converting to binary.
+> Example:
+> [input: 0, output: 0000]
+> [input: 13, output: 1101]
+// This is a brute force solution.  It checks every possible
+// value of the input integer and jump to the appropriate
+// branch to output the corresponding binary representation.
+start:
+    int = input;
+    check int = 15;
+    jump if true: fifteen;
+    check int = 14;
+    jump if true: fourteen;
+    check int = 13;
+    jump if true: thirteen;
+    check int = 12;
+    jump if true: twelve;
+    check int = 11;
+    jump if true: eleven;
+    check int = 10;
+    jump if true: ten;
+    check int = 9;
+    jump if true: nine;
+    check int = 8;
+    jump if true: eight;
+    check int = 7;
+    jump if true: seven;
+    check int = 6;
+    jump if true: six;
+    check int = 5;
+    jump if true: five;
+    check int = 4;
+    jump if true: four;
+    check int = 3;
+    jump if true: three;
+    check int = 2;
+    jump if true: two;
+    check int = 1;
+    jump if true: one;
+    output = 0000;
+    jump to: start;
+fifteen:
+    output = 1111;
+    jump to: start;
+fourteen:
+    output = 1110;
+    jump to: start;
+thirteen:
+    output = 1101;
+    jump to: start;
+twelve:
+    output = 1100;
+    jump to: start;
+eleven:
+    output = 1011;
+    jump to: start;
+ten:
+    output = 1010;
+    jump to: start;
+nine:
+    output = 1001;
+    jump to: start;
+eight:
+    output = 1000;
+    jump to: start;
+seven:
+    output = 0111;
+    jump to: start;
+six:
+    output = 0110;
+    jump to: start;
+five:
+    output = 0101;
+    jump to: start;
+four:
+    output = 0100;
+    jump to: start;
+three:
+    output = 0011;
+    jump to: start;
+two:
+    output = 0010;
+    jump to: start;
+one:
+    output = 0001;
