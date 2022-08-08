@@ -24,37 +24,37 @@
 // digit of S is 1 and print the string S.  Otherwise, the
 // fourth digit of S is 0 and print S.  This solution is
 // optimal, according to the game.
-int = input;
-str = ;
-check int > 7;
-jump if false: zero8;
-str = str + 1;
-int = int - 8;
-jump to: four;
-zero8:
-    str = str + 0;
-four:
-    check int > 3;
-    jump if false: zero4;
-    str = str + 1;
-    int = int - 4;
-    jump to: two;
-zero4:
-    str = str + 0;
-two:
-    check int > 1;
-    jump if false: zero2;
-    str = str + 1;
-    int = int - 2;
-    jump to: one;
-zero2:
-    str = str + 0;
-one:
-    check int = 1;
-    jump if false: zero;
-    str = str + 1;
-    jump to: print;
-zero:
-    str = str + 0;
-print:
-    output = str;
+int = input;              // Read the input integer n.
+str = ;                   // S := empty string
+check int > 7;            // Is n >= 8?
+jump if false: zero8;     // If not, go to "zero8".
+str = str + 1;            // Otherwise, 1 as first digit.
+int = int - 8;            // n := n - 8
+jump to: four;            // Go to "four".
+zero8:                    // The "zero8" branch.
+    str = str + 0;        // 0 as first digit.
+four:                     // The "four" branch.
+    check int > 3;        // Is n >= 4?
+    jump if false: zero4; // If not, go to "zero4".
+    str = str + 1;        // Otherwise, 1 as second digit.
+    int = int - 4;        // n := n - 4
+    jump to: two;         // Go to "two".
+zero4:                    // The "zero4" branch.
+    str = str + 0;        // 0 as second digit.
+two:                      // The "two" branch.
+    check int > 1;        // Is n >= 2?
+    jump if false: zero2; // If not, go to "zero2".
+    str = str + 1;        // Otherwise, 1 as third digit.
+    int = int - 2;        // n := n - 2
+    jump to: one;         // Go to "one".
+zero2:                    // The "zero2" branch.
+    str = str + 0;        // 0 as third digit.
+one:                      // The "one" branch.
+    check int = 1;        // Is n = 1?
+    jump if false: zero;  // If not, go to "zero".
+    str = str + 1;        // Otherwise, 1 as fourth digit.
+    jump to: print;       // Go to "print".
+zero:                     // The "zero" branch.
+    str = str + 0;        // 0 as fourth digit.
+print:                    // The "print" branch.
+    output = str;         // Print the binary representation.
