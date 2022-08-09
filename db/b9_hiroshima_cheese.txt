@@ -1,5 +1,8 @@
 > Task: Make both grid patterns identical.  First grid can be written by
 > outputting true or false.  Second grid shows the solution.
+// Use a string to encode the pattern.  Check whether the
+// character at index i is x and print the boolean result.
+// This solution is optimal, according to the game.
 str = xoxxooxxxoooxxxxooooxxxxxoooooxx;  // Encoded pattern.
 char = str[int];  // Character at index i.
 check char = x;   // Is character = x?
