@@ -6,5 +6,5 @@ loop:                     // Start of "loop".
     int = reg;            // Set current year to latest year.
     reg = input;          // Read a year from input.
     check int = reg;      // Are two year values the same?
-    jump if false: loop;  // If not, go to start of "loop".
+    jump if false: loop;  // If not, go to "loop".
 output = int;             // Print the duplicate year.

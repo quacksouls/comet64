@@ -3,9 +3,9 @@
 // Similar to the previous solution.  We do not use an
 // explicit loop.  This solution is optimal, according to
 // the game.
-reg = input;        // Read the year from input.
-check int = reg;    // Are both values the same?
-jump if false: end; // If not, go to "end".
-output = int;       // Print the duplicate year.
-end:                // The "end" branch.
-    int = reg;      // Set current year to latest year read.
+reg = input;         // Read the year from input.
+check int = reg;     // Are both values the same?
+jump if false: end;  // If not, go to "end".
+output = int;        // Print the duplicate year.
+end:                 // The "end" branch.
+    int = reg;       // Set current year to latest year.

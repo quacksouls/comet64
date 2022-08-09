@@ -9,7 +9,7 @@
 reg = input;          // Read the year from input.
 check int = reg;      // Are both values the same?
 jump if true: print;  // If so, go to "print".
-jump to: end;         // Otherwise, go to "end".
+jump to: end;         // Go to "end".
 print:                // The "print" branch.
     output = int;     // Print the duplicate year.
 end:                  // The "end" branch.
