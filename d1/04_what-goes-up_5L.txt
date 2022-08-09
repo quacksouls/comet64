@@ -12,4 +12,4 @@ int = 1;            // Start at 1.
 loop:               // Start of "loop".
     output = int;   // Print the integer.
     int++;          // Increment the integer.
-    jump to: loop;  // Go to start of "loop".
+    jump to: loop;  // Go to "loop".

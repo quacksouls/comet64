@@ -8,6 +8,6 @@ loop:                    // Start of "loop".
     output = int;        // Print the integer.
     int++;               // Increment the current integer.
     check int < 101;     // Is integer < 101?
-    jump if true: loop;  // If so, go to start of "loop".
-    jump if false: end;  // Otherwise, finish the loop.
-end:
+    jump if true: loop;  // If so, go to "loop".
+    jump if false: end;  // Otherwise, go to "end".
+end:                     // End of program.

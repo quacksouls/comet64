@@ -1,10 +1,10 @@
 > Query: Ignore the input for now and output all the numbers from 1 to
 > 100, inclusive.
 // Suppose we want to use 2 lines to output all integers from
-// 1 to 100, inclusive.  Assume the register "int" to
-// initially hold zero.  Incrementing that register would give
-// us 1 and we can output that value.  Continue incrementing
-// and outputting until we have output all required integers.
-// This solution is optimal, according to the game.
+// 1 to 100, inclusive.  The register "int" is initially zero.
+// Incrementing that register would give us 1 and we can
+// output that value.  Continue incrementing and outputting
+// until we have output all required integers.  This solution
+// is optimal, according to the game.
 int++;         // Increment the integer.
 output = int;  // Print the integer.
