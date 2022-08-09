@@ -8,5 +8,5 @@ loop:                     // Start of "loop".
     int--;                // Decrement the integer by 1.
     check int < 0;        // Is integer < 0?
     jump if true: end;    // If so, go to "end".
-    jump if false: loop;  // Otherwise, go to start of "loop".
-end:                      // The "end" of the program.
+    jump if false: loop;  // Otherwise, go to "loop".
+end:                      // End of program.

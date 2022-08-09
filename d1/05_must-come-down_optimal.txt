@@ -1,10 +1,10 @@
 > Query: Output a countdown from 100 to 0, inclusive.  Ignore the input.
-// Assume the register "int" to be initially set to zero.
-// Subtract the content of int from 100, which yields the
-// next integer to be printed.  Increment the content of int.
-// We do not need an explicit loop because the game loops back
-// to the start of the program once it has read the last line
-// of code.  This solution is optimal, according to the game.
+// The register "int" is initially zero.  Subtract the content
+// of int from 100, which yields the next integer to be
+// printed.  Increment the content of int.  We do not need an
+// explicit loop because the game loops back to the start of
+// the program once it has read the last line of code.  This
+// solution is optimal, according to the game.
 reg = 100 - int;  // Subtract content of int from 100.
 output = reg;     // Print the result of the subtraction.
 int++;            // Increment int.

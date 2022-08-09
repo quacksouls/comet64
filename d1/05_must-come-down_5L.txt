@@ -7,4 +7,4 @@ int = 100;          // Start at 100.
 loop:               // Start of "loop".
     output = int;   // Print the integer.
     int--;          // Decrement the integer by 1.
-    jump to: loop;  // Go to start of "loop".
+    jump to: loop;  // Go to "loop".
