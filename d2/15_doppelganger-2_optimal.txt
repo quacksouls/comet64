@@ -1,6 +1,7 @@
 > Query: For each two values from input, check if they are the same.  If they
 > are, output "true"; otherwise output "false".
-// Check whether two consecutive strings are the same.  This
-// solution is optimal, according to the game.
-check input = input;  // Is current input same as new input?
+// Similar to the previous solution.  However, we do not need
+// to read the first string.  This solution is optimal,
+// according to the game.
+check input = input;  // Is current input same as next input?
 output = bool;        // Print the result of comparison.
