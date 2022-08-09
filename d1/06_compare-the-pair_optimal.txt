@@ -3,7 +3,7 @@
 // lines from the previous solution by noticing that we do
 // not need a jump instruction when the conditional "x > y"
 // is false.  If the conditional "x > y" is true, we jump to
-// the branch that prints x.  Otherwise we print y without
+// the branch that prints x.  Otherwise, we print y without
 // having to jump to a different branch.  This solution is
 // optimal, according to the game.
 int = input;          // Read x from input.
@@ -12,4 +12,4 @@ check int > reg;      // Is x > y?
 jump if true: print;  // If so, go to "print".
 int = reg;            // Otherwise, set int to value of reg.
 print:                // The "print" branch.
-    output = int;     // Print the value of int.
+    output = int;     // Print the larger number.
