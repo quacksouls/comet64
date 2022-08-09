@@ -14,7 +14,8 @@
 // https://steamcommunity.com/sharedfiles/filedetails/?id=2385965404
 //
 // The above guide does not explain the solution.  I have no
-// idea how the algorithm works.
+// idea how and why the algorithm works.  This solution is
+// optimal, according to the game.
 reg = input + 404;
 reg = reg / 100;
 int = reg;
