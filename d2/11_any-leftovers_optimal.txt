@@ -3,14 +3,14 @@
 > Example:
 > [input: 12, 11, 6]
 > [output: 0, 3, 2]
-// Given an input x, we want the remainder when x is divided by
-// 4.  The remainder function is
+// Given an input x, we want the remainder when x is divided
+// by 4.  The remainder function is
 //
 // f(x) := x mod 4
 //
 // This can be implemented as follows.  Define the quotient by
 // q := floor(x / 4), where the floor(x) function is simply
-// the integer part of a floating point number x. Define the
+// the integer part of a floating point number x.  Define the
 // number n := 4 * q and the remainder can be calculated as
 // r := x - n.  This solution is optimal, according to the
 // game.
