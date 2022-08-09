@@ -1,7 +1,7 @@
 > Query: Only output the numbers that have a remainder of 3 when divided by 4.
 // Assume the input number x is at least 4.  Let x := x - 4.
 // If the result is less than 4, we have the remainder.
-// Otherwise repeat the subtraction process.  Given the
+// Otherwise, repeat the subtraction process.  Given the
 // remainder, determine whether it is 3.  If so, print the
 // original integer.
 reg = input;                  // Read in x.
