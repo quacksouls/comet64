@@ -1,0 +1,29 @@
+> Query: Input contains binary numerals between 0000 and 1111.  Output
+> them after converting to decimal.
+> Example:
+> [input: 0000, output: 0]
+> [input: 1101, output: 13]
+// This solution is due to 
+//
+// https://steamcommunity.com/id/werg0n
+// https://steamcommunity.com/id/hanni16
+// https://steamcommunity.com/id/giraffe94
+//
+// from the guide
+//
+// https://steamcommunity.com/sharedfiles/filedetails/?id=2385965404
+//
+// The above guide does not explain the solution.  I have no
+// idea how the algorithm works.
+reg = input + 404;
+reg = reg / 100;
+int = reg;
+reg = reg - int;
+reg = reg * 100;
+switch reg;
+int = int / 5;
+int = int * 4;
+switch reg;
+reg = reg / 5;
+int = int + reg;
+output = int;

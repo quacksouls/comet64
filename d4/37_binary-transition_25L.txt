@@ -1,0 +1,46 @@
+> Query: Input contains binary numerals between 0000 and 1111.  Output
+> them after converting to decimal.
+> Example:
+> [input: 0000, output: 0]
+> [input: 1101, output: 13]
+// We use the method of double dabble to convert from binary
+// to decimal representation:
+//
+// https://en.wikipedia.org/wiki/Double_dabble
+//
+// Let S be a string of binary digits.  We want to obtain the
+// decimal equivalent of S.  Set d := 0.  Consider S_0, the
+// left-most digit.  Set d := (2 * d) + S_0.  Consider the
+// next digit S_1 and set d := (2 * d) + S_1.  Continue the
+// process until we have considered all binary digits in S.
+// The final value of d is the decimal representation of S.
+// The algorithm essentially is to double our current value of
+// d and add the current binary digit under consideration.
+// Use the register "int" to store the decimal representation.
+// Initially "int" holds 0, hence no need to perform the first
+// doubling operation.
+reg = input;
+check reg < 1000;
+jump if true: four;
+reg = reg - 1000;
+int++;
+four:
+    int = 2 * int;
+    check reg < 100;
+    jump if true: two;
+    reg = reg - 100;
+    int++;
+two:
+    int = 2 * int;
+    check reg < 10;
+    jump if true: one;
+    reg = reg - 10;
+    int++;
+one:
+    int = 2 * int;
+    check reg < 1;
+    jump if true: zero;
+    int++;
+zero:
+    output = int;
+    int = 0;

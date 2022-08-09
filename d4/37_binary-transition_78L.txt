@@ -1,0 +1,86 @@
+> Query: Input contains binary numerals between 0000 and 1111.  Output
+> them after converting to decimal.
+> Example:
+> [input: 0000, output: 0]
+> [input: 1101, output: 13]
+// This is a brute force solution.  We check every possible
+// binary representation and print the corresponding decimal
+// representation.
+start:
+    int = input;
+    check int = 1111;
+    jump if true: fifteen;
+    check int = 1110;
+    jump if true: fourteen;
+    check int = 1101;
+    jump if true: thirteen;
+    check int = 1100;
+    jump if true: twelve;
+    check int = 1011;
+    jump if true: eleven;
+    check int = 1010;
+    jump if true: ten;
+    check int = 1001;
+    jump if true: nine;
+    check int = 1000;
+    jump if true: eight;
+    check int = 0111;
+    jump if true: seven;
+    check int = 0110;
+    jump if true: six;
+    check int = 0101;
+    jump if true: five;
+    check int = 0100;
+    jump if true: four;
+    check int = 0011;
+    jump if true: three;
+    check int = 0010;
+    jump if true: two;
+    check int = 0001;
+    jump if true: one;
+    output = 0;
+    jump to: start;
+fifteen:
+    output = 15;
+    jump to: start;
+fourteen:
+    output = 14;
+    jump to: start;
+thirteen:
+    output = 13;
+    jump to: start;
+twelve:
+    output = 12;
+    jump to: start;
+eleven:
+    output = 11;
+    jump to: start;
+ten:
+    output = 10;
+    jump to: start;
+nine:
+    output = 9;
+    jump to: start;
+eight:
+    output = 8;
+    jump to: start;
+seven:
+    output = 7;
+    jump to: start;
+six:
+    output = 6;
+    jump to: start;
+five:
+    output = 5;
+    jump to: start;
+four:
+    output = 4;
+    jump to: start;
+three:
+    output = 3;
+    jump to: start;
+two:
+    output = 2;
+    jump to: start;
+one:
+    output = 1;
