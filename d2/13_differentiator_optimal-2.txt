@@ -10,7 +10,7 @@
 // (3) If d > 5 or d < -5, then d^2 > 25.
 //
 // We only need to test whether d^2 > 25.  If true, then the
-// difference is more than 5 units.  Otherwise the difference
+// difference is more than 5 units.  Otherwise, the difference
 // is at most 5 units.  This solution is optimal, according
 // to the game.
 int = input - input;  // d := a - b
