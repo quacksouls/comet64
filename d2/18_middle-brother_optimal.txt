@@ -8,10 +8,10 @@ int = input;              // Read in x.
 reg = input;              // Read in y.
 check int < reg;          // Is x < y?
 jump if true: less;       // If so, go to "less".
-switch int;               // Store "int" in memory.
+switch int;               // Store x.
 int = reg;                // int := reg
-switch reg;               // Get previous value of "int".
-less:                     // The "less" branch.
+switch reg;               // Retrieve x.
+less:                     // x < y
     switch int;           // Store value of min(x, y).
     int = input;          // Read in z.
     check reg < int;      // Is y < z?

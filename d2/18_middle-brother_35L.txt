@@ -34,7 +34,7 @@ zlty:                     // z <= y
     jump if false: zltx;  // If not, then z <= x.
     output = int;         // Case (2), z middle.
     jump to: end;         // Go to "end".
-zltx:                     //
+zltx:                     // z <= x
     output = reg;         // Case (3), x middle.
     jump to: end;         // Go to "end".
 xltz:                     // x < z

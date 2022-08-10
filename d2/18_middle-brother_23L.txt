@@ -9,20 +9,20 @@
 // (5) y <= x, z <= x, y < z, so middle is z.
 // (6) y <= x, z <= x, z <= y, so middle is y.
 //
-// Notice the symmetry between the cases of x < y and
-// y <= x.  Let the registers "int" and "reg" hold the values
-// of x and y, respectively.  If x < y, we proceed with cases
-// (1) to (3) as per above.  Otherwise y <= x, we swap the
-// values of "int" and "reg", and proceed as per cases (1) to
-// (3).
+// Similar to the previous solution.  Notice the symmetry
+// between the cases of x < y and y <= x.  Let the registers
+// "int" and "reg" hold the values of x and y, respectively.
+// If x < y, we proceed with cases (1) to (3).  Otherwise,
+// y <= x, we swap the values of "int" and "reg", and proceed
+// as per cases (1) to (3).
 int = input;                // Read in x.
 reg = input;                // Read in y.
 check int < reg;            // Is x < y?
 jump if true: less;         // If so, go to "less".
-switch int;                 // Store "int" in memory.
+switch int;                 // Store x.
 int = reg;                  // int := reg
-switch reg;                 // Get previous value of "int".
-less:                       // The "less" branch.
+switch reg;                 // Retrieve x.
+less:                       // x < y
     switch int;             // Store value of min(x, y).
     int = input;            // Read in z.
     check reg < int;        // Is y < z?
