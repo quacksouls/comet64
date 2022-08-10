@@ -4,16 +4,17 @@
 // registers "int" and "reg" hold the values of x and y,
 // respectively.  Note the symmetry between x < y and y <= x.
 // In particular, consider the symmetry between cases (1) and
-// (2), and cases (3) and (4).  If x < y, use "int" to store
-// the value of z.  If y <= x, we set reg := int and use "int"
-// to store the value of z.  In both cases, reg := max(x, y).
-// This solution is optimal, according to the game.
+// (2), and cases (3) and (4) from the previous solution.  If
+// x < y, use "int" to store the value of z.  If y <= x, we
+// set reg := int and use "int" to store the value of z.  In
+// both cases, reg := max(x, y).  This solution is optimal,
+// according to the game.
 int = input;              // Read in x.
 reg = input;              // Read in y.
 check int < reg;          // Is x < y?
 jump if true: less;       // If so, go to "less".
 reg = int;                // Otherwise, set reg := int.
-less:                     // The "less" branch.
+less:                     // x < y
     int = input;          // Read in z.
     check int < reg;      // Is z < max(x, y)?
     jump if true: print;  // If so, go to "print".
