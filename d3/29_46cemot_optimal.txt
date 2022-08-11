@@ -30,8 +30,8 @@ loop:                      // Start of "loop".
     switch int;            // Retrieve index i.
     int--;                 // Decrement index i.
     check int < 1;         // Is index i < 1?
-    jump if false: loop;   // If so, go to "print".
-    jump to: print;        // Go to "loop".
+    jump if false: loop;   // If not, go to "loop".
+    jump to: print;        // Go to "print".
 swap:                      // The "swap" branch.
     switch int;            // Get index i; store right char.
     str[int] = char;       // Left char at right index.
@@ -39,7 +39,7 @@ swap:                      // The "swap" branch.
     switch int;            // Get right char; store index i.
     char = int;            // Right char as character.
     str[reg] = char;       // Right char at left index.
-    int = str.length - 1;  // Set i to last index in S.
+    int = str.length - 1;  // Set i to last index of S.
     jump to: loop;         // Go to "loop".
 print:                     // The "print" branch.
     output = str;          // Print the sorted string.
