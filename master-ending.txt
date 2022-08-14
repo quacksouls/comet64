@@ -1,0 +1,12 @@
+// Each encrypted string is obtained by interchanging the first
+// and last characters of the string. To unscramble the string,
+// all you need to do is swap these two characters around.
+str = input;           // Read a string.
+char = str[0];         // First character.
+switch char;           // Store first character.
+int = str.length - 1;  // Index of last character.
+char = str[int];       // Last character.
+str[0] = char;         // Last character at first index.
+switch char;           // Retrieve first character.
+str[int] = char;       // First character at last index.
+print str;             // Print decrypted string.
