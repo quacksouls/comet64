@@ -3,7 +3,7 @@
 > Example:
 > [input: 0000, output: 0]
 > [input: 1101, output: 13]
-// This solution is due to 
+// This solution is due to
 //
 // https://steamcommunity.com/id/werg0n
 // https://steamcommunity.com/id/hanni16
@@ -13,9 +13,47 @@
 //
 // https://steamcommunity.com/sharedfiles/filedetails/?id=2385965404
 //
-// The above guide does not explain the solution.  I have no
-// idea how and why the algorithm works.  This solution is
-// optimal, according to the game.
+// This solution is optimal, according to the game.  Here is an
+// explanation of the solution by WeRGoN:
+//
+// The main idea of this solution was: using simple mathematical operations on
+// 4-digit binary numbers (which are perceived as decimal), distribute the
+// results evenly enough to reduce them later to 0, 1, 2, ..., 15.  It seems
+// that I even managed to do this, but with too many lines, so I modernized the
+// solution a bit: I tried to do the same thing, but with pairs of binary
+// digits.
+//
+// If we go back to my code:
+// Line 1: add a magic constant (I'll explain it later).
+// Lines 2-6: we separate the 4-digit number into 2 pairs.
+// Lines 7-8: transform the first pair.
+// Lines 9-11: transform the second pair and add to the result from the first
+// one.
+//
+// I will begin the explanation with the transformation of pairs.  Each pair of
+// binary numbers can have 4 states: 00, 01, 10, 11 (i.e. 0, 1, 10, 11).  Our
+// task is to convert this series into 0, 1, 2, 3 using simple mathematical
+// operations.  Using only multiplication/division operations, this is
+// impossible, because the series numbers 0, 1, 10, 11 are distributed very
+// unevenly (the difference between 1 and 10 is tenfold, and between 10 and 11
+// is only x1.1).  Ideally, you need to add some value to the numbers of the
+// series in order to at least slightly smooth this series, and then try to
+// find a divisor that will reduce it to 0, 1, 2, 3.  If this could not be done
+// right away, then you would have to repeat these operations several times,
+// each time slightly smoothing the row. But in this case, one cycle was
+// enough.
+//
+// If we add 4 to the series 0, 1, 10, 11, then we get the series 4, 5, 14, 15.
+// By what number should it be divided to get 0, 1, 2, 3?  It is important not
+// to forget that the INT register doesn't round off real numbers, but cuts off
+// the fractional part.  Well, the necessary divisor is the number 5.
+//
+// Now we can convert two-digit binary numbers to decimal.  It remains only to
+// multiply the result of top bits pair by 4 and add it to the result of the
+// second pair.
+//
+// As for the magic number 404, we simply immediately add the number 4 to each
+// pair of binary digits so as not to waste two lines of code on this.
 reg = input + 404;
 reg = reg / 100;
 int = reg;
