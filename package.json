@@ -1,0 +1,34 @@
+{
+  "name": "comet64",
+  "version": "1.0",
+  "description": "Walkthrough of Comet64",
+  "main": "index.js",
+  "scripts": {
+    "clean": "prettier --write README.md doc/*.md",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quacksouls/comet64.git"
+  },
+  "author": "Duck McSouls",
+  "license": "CC BY-NC-SA 4.0",
+  "bugs": {
+    "url": "https://github.com/quacksouls/comet64/issues"
+  },
+  "homepage": "https://github.com/quacksouls/comet64",
+  "devDependencies": {
+    "eslint": "^8.52.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-markdown": "^3.0.1",
+    "eslint-plugin-markdownlint": "^0.5.0",
+    "eslint-plugin-md": "^1.0.19",
+    "eslint-plugin-prettier": "^5.0.1",
+    "gitbook-plugin-octocat": "^1.0.2",
+    "gitbook-plugin-remove-published-with-link": "^1.0.3",
+    "honkit": "^5.1.1",
+    "honkit-plugin-youtube": "^0.0.14",
+    "markdownlint": "^0.31.1",
+    "prettier": "^3.0.3"
+  }
+}
