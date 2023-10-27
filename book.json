@@ -1,0 +1,15 @@
+{
+    "plugins": [
+        "octocat",
+        "remove-published-with-link",
+        "youtube"
+    ],
+    "pluginsConfig": {
+        "fontsettings": {
+            "family": "serif"
+        },
+        "octocat": {
+            "url": "https://github.com/quacksouls/comet64"
+        }
+    }
+}
