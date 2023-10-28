@@ -23,3 +23,4 @@
 - [Middle Brother](doc/middle-brother.md)
 - [Greatest of Brothers](doc/greatest-brothers.md)
 - [Golden Spiral](doc/golden-spiral.md)
+- [Easier Than It Looks](doc/easier-than-it-looks.md)
