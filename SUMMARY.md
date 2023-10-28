@@ -17,3 +17,4 @@
 - [Some Leftovers](doc/some-leftovers.md)
 - [Differentiator](doc/differentiator.md)
 - [Reverse Integeering](doc/reverse-integeering.md)
+- [Doppelgänger 2](doc/doppelgänger-2.md)
