@@ -6,3 +6,4 @@
 - [Launch Discount](doc/launch-discount.md)
 - [Why so Negative?](doc/why-so-negative.md)
 - [BMI Guest](doc/bmi-guest.md)
+- [What Goes Up](doc/what-goes-up.md)
