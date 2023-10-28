@@ -21,3 +21,4 @@
 - [Heads & Tails](doc/heads-tails.md)
 - [Big Brother](doc/big-brother.md)
 - [Middle Brother](doc/middle-brother.md)
+- [Greatest of Brothers](doc/greatest-brothers.md)
