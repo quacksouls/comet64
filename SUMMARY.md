@@ -15,3 +15,4 @@
 - [Just Around](doc/just-around.md)
 - [Any Leftovers?](doc/any-leftovers.md)
 - [Some Leftovers](doc/some-leftovers.md)
+- [Differentiator](doc/differentiator.md)
