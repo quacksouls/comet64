@@ -22,3 +22,4 @@
 - [Big Brother](doc/big-brother.md)
 - [Middle Brother](doc/middle-brother.md)
 - [Greatest of Brothers](doc/greatest-brothers.md)
+- [Golden Spiral](doc/golden-spiral.md)
