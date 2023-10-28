@@ -16,3 +16,4 @@
 - [Any Leftovers?](doc/any-leftovers.md)
 - [Some Leftovers](doc/some-leftovers.md)
 - [Differentiator](doc/differentiator.md)
+- [Reverse Integeering](doc/reverse-integeering.md)
