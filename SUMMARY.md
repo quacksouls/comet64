@@ -4,3 +4,4 @@
 - [Preface](README.md)
 - [Introduction](doc/introduction.md)
 - [Launch Discount](doc/launch-discount.md)
+- [Why so Negative?](doc/why-so-negative.md)
