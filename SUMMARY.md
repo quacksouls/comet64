@@ -9,3 +9,4 @@
 - [What Goes Up](doc/what-goes-up.md)
 - [Must Come Down](doc/must-come-down.md)
 - [Compare the Pair](doc/compare-pair.md)
+- [The Doppelgänger](doc/doppelgänger.md)
