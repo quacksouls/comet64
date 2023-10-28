@@ -1,6 +1,8 @@
 {
     "plugins": [
+        "code",
         "octocat",
+        "prism", "-highlight",
         "remove-published-with-link",
         "youtube"
     ],
