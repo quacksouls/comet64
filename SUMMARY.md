@@ -28,3 +28,4 @@
 - [Give me a Ballpark](doc/give-me-ballpark.md)
 - [Black Jack](doc/black-jack.md)
 - [Initial Impression](doc/initial-impression.md)
+- [Lasting Impression](doc/lasting-impression.md)
