@@ -24,3 +24,4 @@
 - [Greatest of Brothers](doc/greatest-brothers.md)
 - [Golden Spiral](doc/golden-spiral.md)
 - [Easier Than It Looks](doc/easier-than-it-looks.md)
+- [Harder Than It Looks](doc/harder-than-it-looks.md)
