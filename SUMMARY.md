@@ -37,3 +37,4 @@
 - [Paired Coordinates](doc/paired-coordinates.md)
 - [Secret Message](doc/secret-message.md)
 - [Root Input](doc/root-input.md)
+- [Negative Initiative](doc/negative-initiative.md)
