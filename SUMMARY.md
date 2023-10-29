@@ -29,3 +29,4 @@
 - [Black Jack](doc/black-jack.md)
 - [Initial Impression](doc/initial-impression.md)
 - [Lasting Impression](doc/lasting-impression.md)
+- [thelongeststring](doc/thelongeststring.md)
