@@ -27,3 +27,4 @@
 - [Harder Than It Looks](doc/harder-than-it-looks.md)
 - [Give me a Ballpark](doc/give-me-ballpark.md)
 - [Black Jack](doc/black-jack.md)
+- [Initial Impression](doc/initial-impression.md)
