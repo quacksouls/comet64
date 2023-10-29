@@ -25,3 +25,4 @@
 - [Golden Spiral](doc/golden-spiral.md)
 - [Easier Than It Looks](doc/easier-than-it-looks.md)
 - [Harder Than It Looks](doc/harder-than-it-looks.md)
+- [Give me a Ballpark](doc/give-me-ballpark.md)
