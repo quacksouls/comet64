@@ -34,3 +34,4 @@
 - [46cemot](doc/46cemot.md)
 - [Comet LXIV](doc/comet-LXIV.md)
 - [Coordinate Pairs](doc/coordinate-pairs.md)
+- [Paired Coordinates](doc/paired-coordinates.md)
