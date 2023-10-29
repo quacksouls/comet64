@@ -32,3 +32,4 @@
 - [thelongeststring](doc/thelongeststring.md)
 - [46temoc](doc/46temoc.md)
 - [46cemot](doc/46cemot.md)
+- [Comet LXIV](doc/comet-LXIV.md)
