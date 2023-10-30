@@ -43,3 +43,4 @@
 - [No Duplicates!](doc/no-duplicates-1.md)
 - [No Duplicates!](doc/no-duplicates-2.md)
 - [Let's Settle This](doc/lets-settle-this.md)
+- [A1: full_on](doc/A1-full_on.md)
