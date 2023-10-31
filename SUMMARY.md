@@ -59,3 +59,4 @@
 - [B5: criss_cross](doc/B5-criss_cross.md)
 - [B6: shooting_stars](doc/B6-shooting_stars.md)
 - [B7: upper_right](doc/B7-upper_right.md)
+- [B8: play_button](doc/B8-play_button.md)
