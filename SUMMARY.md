@@ -61,3 +61,4 @@
 - [B7: upper_right](doc/B7-upper_right.md)
 - [B8: play_button](doc/B8-play_button.md)
 - [B9: hiroshima](doc/B9-hiroshima.md)
+- [Achievement: The Master](doc/achievement-the-master.md)
