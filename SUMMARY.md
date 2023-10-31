@@ -51,3 +51,4 @@
 - [A6: outer_circle](doc/A6-outer_circle.md)
 - [A7: inner_circle](doc/A7-inner_circle.md)
 - [A8: forward_slash](doc/A8-forward_slash.md)
+- [A9: back_slash](doc/A9-back_slash.md)
