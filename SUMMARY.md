@@ -49,3 +49,4 @@
 - [A4: striped_vertical](doc/A4-striped_vertical.md)
 - [A5: striped_horizontal](doc/A5-striped_horizontal.md)
 - [A6: outer_circle](doc/A6-outer_circle.md)
+- [A7: inner_circle](doc/A7-inner_circle.md)
