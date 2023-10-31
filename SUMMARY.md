@@ -47,3 +47,4 @@
 - [A2: one_on](doc/A2-one_on.md)
 - [A3: one_off](doc/A3-one_off.md)
 - [A4: striped_vertical](doc/A4-striped_vertical.md)
+- [A5: striped_horizontal](doc/A5-striped_horizontal.md)
