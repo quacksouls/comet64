@@ -57,3 +57,4 @@
 - [B3: ascending_order](doc/B3-ascending_order.md)
 - [B4: middle_path](doc/B4-middle_path.md)
 - [B5: criss_cross](doc/B5-criss_cross.md)
+- [B6: shooting_stars](doc/B6-shooting_stars.md)
