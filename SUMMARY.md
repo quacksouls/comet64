@@ -50,3 +50,4 @@
 - [A5: striped_horizontal](doc/A5-striped_horizontal.md)
 - [A6: outer_circle](doc/A6-outer_circle.md)
 - [A7: inner_circle](doc/A7-inner_circle.md)
+- [A8: forward_slash](doc/A8-forward_slash.md)
