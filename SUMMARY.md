@@ -58,3 +58,4 @@
 - [B4: middle_path](doc/B4-middle_path.md)
 - [B5: criss_cross](doc/B5-criss_cross.md)
 - [B6: shooting_stars](doc/B6-shooting_stars.md)
+- [B7: upper_right](doc/B7-upper_right.md)
