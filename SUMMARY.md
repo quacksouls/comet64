@@ -54,3 +54,4 @@
 - [A9: back_slash](doc/A9-back_slash.md)
 - [B1: output_bool](doc/B1-output_bool.md)
 - [B2: checker_board](doc/B2-checker_board.md)
+- [B3: ascending_order](doc/B3-ascending_order.md)
