@@ -45,3 +45,4 @@
 - [Let's Settle This](doc/lets-settle-this.md)
 - [A1: full_on](doc/A1-full_on.md)
 - [A2: one_on](doc/A2-one_on.md)
+- [A3: one_off](doc/A3-one_off.md)
